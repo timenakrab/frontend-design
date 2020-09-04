@@ -20,6 +20,7 @@ module.exports = {
     'import/prefer-default-export': [0],
     'class-methods-use-this': 0,
     'jsx-a11y/label-has-for': 0,
+    'jsx-a11y/label-has-associated-control': 0,
   },
   settings: {
     flowtype: {

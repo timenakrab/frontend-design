@@ -27,6 +27,7 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
           />
+          <link rel="stylesheet" href="/customs.css" />
         </Head>
         <body>
           <Main />
