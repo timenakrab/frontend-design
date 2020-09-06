@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import SwitchItem from '../src/switch-page/switch';
+import SwitchMobile from '../src/switch-page/SwitchMobile';
 
 const Root = styled.div`
   display: flex;
@@ -16,9 +16,9 @@ const Root = styled.div`
 const Switch = () => {
   return (
     <Root>
-      <SwitchItem />
-      <SwitchItem size={60} />
-      <SwitchItem size={100} uncheckedColor="grey" checkedColor="white" />
+      <SwitchMobile />
+      <SwitchMobile size={60} />
+      <SwitchMobile size={100} uncheckedColor="grey" checkedColor="white" />
     </Root>
   );
 };
