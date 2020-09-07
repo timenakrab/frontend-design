@@ -1,7 +1,7 @@
 /* ref: https://www.youtube.com/watch?v=-Rv1dbvM1EY */
 import React from 'react';
 import styled from 'styled-components';
-import Card from '../src/card-hover-effect-page/CardEffect';
+import Card from '../src/card/CardEffect';
 
 const Root = styled.div`
   display: flex;
@@ -11,7 +11,6 @@ const Root = styled.div`
   flex-direction: column;
   background-color: #08001b;
 `;
-
 const Container = styled.div`
   width: 100%;
   display: flex;
