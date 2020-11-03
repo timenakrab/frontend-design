@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+
+type SwitchBodyProps = {
+  checked: boolean;
+  itemSize: number;
+  checkedColor: string;
+  uncheckedColor: string;
+};
 
 const Label = styled.label`
   position: ralative;
@@ -11,7 +18,7 @@ const CheckBox = styled.input`
   appearance: none;
   display: none;
 `;
-const SwitchBlock = styled.span`
+const SwitchBlock = styled.span<{ itemSize: number }>`
   position: relative;
   display: block;
   width: ${(props) => props.itemSize * 2}px;
@@ -21,7 +28,7 @@ const SwitchBlock = styled.span`
   box-shadow: inset 0px 2px 15px rgba(0, 0, 0, 0.2), inset 0px 2px 2px rgba(0, 0, 0, 0.2),
     inset 0px -1px 1px rgba(0, 0, 0, 0.2);
 `;
-const SwitchBody = styled.i`
+const SwitchBody = styled.i<SwitchBodyProps>`
   position: absolute;
   top: 0px;
   left: ${(props) => (props.checked ? props.itemSize : '0')}px;

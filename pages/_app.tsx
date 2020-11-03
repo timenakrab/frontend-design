@@ -1,11 +1,10 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import App from 'next/app';
+import App, { AppProps } from 'next/app';
 import Head from 'next/head';
 import { withRouter } from 'next/router';
 import React from 'react';
 
-class MyApp extends App {
-  constructor(props) {
+class MyApp extends App<AppProps> {
+  constructor(props: AppProps) {
     super(props);
     this.state = {};
   }
@@ -18,6 +17,7 @@ class MyApp extends App {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         </Head>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Component {...pageProps} router={router} />
       </>
     );

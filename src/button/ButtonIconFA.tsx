@@ -1,8 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components';
 
-const Button = styled.a`
+const Button = styled.a<{ bgColor: string }>`
   position: relative;
   width: 80px;
   height: 80px;

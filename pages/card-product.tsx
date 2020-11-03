@@ -1,6 +1,7 @@
 /* ref: https://www.youtube.com/watch?v=yNBObeTWvio */
 import React from 'react';
 import styled from 'styled-components';
+
 import CardProduct from '../src/card/CardProduct';
 
 const Root = styled.div`

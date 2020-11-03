@@ -1,6 +1,7 @@
 /* ref: https://www.youtube.com/watch?v=p58K05YD98A */
 import React from 'react';
 import styled from 'styled-components';
+
 import SwitchMobile from '../src/switch-page/SwitchMobile';
 
 const Root = styled.div`

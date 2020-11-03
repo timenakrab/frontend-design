@@ -1,6 +1,7 @@
 /* ref: https://www.youtube.com/watch?v=-Rv1dbvM1EY */
 import React from 'react';
 import styled from 'styled-components';
+
 import Card from '../src/card/CardEffect';
 
 const Root = styled.div`

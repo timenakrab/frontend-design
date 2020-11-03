@@ -1,8 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components';
 
-const Card = styled.div`
+const Card = styled.div<{ bgColor: string }>`
   font-family: 'kanit', sans-serif;
   position: relative;
   width: 320px;
@@ -82,7 +82,7 @@ const Satang = styled.small`
   font-weight: 500;
   letter-spacing: 1px;
 `;
-const BuyNow = styled.a`
+const BuyNow = styled.a<{ bgColor: string }>`
   position: relative;
   top: 200px;
   opacity: 0;

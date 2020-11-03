@@ -5,6 +5,7 @@ module.exports = withSass({
   devIndicators: {
     autoPrerender: false,
   },
+  crossOrigin: 'anonymous',
   webpack: (config, { dev }) => {
     if (dev) {
       config.module.rules.push({
