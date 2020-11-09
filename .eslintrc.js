@@ -15,7 +15,12 @@ module.exports = {
     fetch: 'readonly',
   },
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'import/prefer-default-export': [0],
     'class-methods-use-this': 0,
