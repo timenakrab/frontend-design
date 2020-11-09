@@ -3,8 +3,8 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import styled from 'styled-components';
 
 const SectionCode = styled.div`
-  margin-top: 16px;
-  margin-bottom: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 `;
 
 interface CodePreviewProps {
