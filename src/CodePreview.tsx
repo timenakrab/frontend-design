@@ -29,11 +29,7 @@ const CodePreview = ({ language, codeString }: CodePreviewProps) => {
   const CodeDisplay = trimCode(codeString);
 
   if (!style) {
-    return (
-      <SectionCode>
-        <p>{CodeDisplay}</p>
-      </SectionCode>
-    );
+    return <p>{CodeDisplay}</p>;
   }
   return (
     <SectionCode>
