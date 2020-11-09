@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import styled from 'styled-components';
 
+const NoStyle = styled.p`
+  display: none;
+`;
 const SectionCode = styled.div`
   padding-top: 16px;
   padding-bottom: 16px;
@@ -29,7 +32,7 @@ const CodePreview = ({ language, codeString }: CodePreviewProps) => {
   const CodeDisplay = trimCode(codeString);
 
   if (!style) {
-    return <p>{CodeDisplay}</p>;
+    return <NoStyle>{CodeDisplay}</NoStyle>;
   }
   return (
     <SectionCode>
