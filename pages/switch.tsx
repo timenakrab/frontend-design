@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import CodePreview from '../src/CodePreview';
 import SwitchMobile from '../src/switch-page/SwitchMobile';
 
 const Root = styled.div`
@@ -12,13 +13,34 @@ const Root = styled.div`
   flex-direction: column;
   background-color: #2b2b2b;
 `;
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
 
 const Switch = () => {
   return (
     <Root>
-      <SwitchMobile />
-      <SwitchMobile size={60} />
-      <SwitchMobile size={100} uncheckedColor="grey" checkedColor="white" />
+      <Container>
+        <SwitchMobile />
+        <SwitchMobile size={60} />
+        <SwitchMobile size={100} uncheckedColor="grey" checkedColor="white" />
+      </Container>
+      <CodePreview
+        language="tsx"
+        codeString={`
+        import SwitchMobile from '../src/switch-page/SwitchMobile';
+        ...
+        <SwitchMobile />
+        <SwitchMobile size={60} />
+        <SwitchMobile size={100} uncheckedColor="grey" checkedColor="white" />
+        ...
+        `}
+      />
     </Root>
   );
 };
