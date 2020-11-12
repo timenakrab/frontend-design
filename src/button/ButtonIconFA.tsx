@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 
 const Button = styled.a<{ bgColor: string }>`
@@ -40,7 +39,13 @@ const Icon = styled.i`
   z-index: 1;
 `;
 
-const ButtonIconFA = ({ link, icon, bgColor }) => {
+type ButtonIconFAProps = {
+  link?: string;
+  icon: string;
+  bgColor?: string;
+};
+
+const ButtonIconFA = ({ link, icon, bgColor }: ButtonIconFAProps): ReactElement => {
   return (
     <Button href={link} bgColor={bgColor}>
       <Icon className={`fab ${icon}`} />
@@ -51,12 +56,6 @@ const ButtonIconFA = ({ link, icon, bgColor }) => {
 ButtonIconFA.defaultProps = {
   link: '/#',
   bgColor: '#ffffff',
-};
-
-ButtonIconFA.propTypes = {
-  link: PropTypes.string,
-  icon: PropTypes.string.isRequired,
-  bgColor: PropTypes.string,
 };
 
 export default ButtonIconFA;

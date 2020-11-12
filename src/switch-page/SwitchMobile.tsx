@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -59,7 +58,14 @@ const SwitchBody = styled.i<SwitchBodyProps>`
   }
 `;
 
-const Switch = ({ size, uncheckedColor, checkedColor, callbackFunc }) => {
+type SwitchProps = {
+  size?: number;
+  uncheckedColor?: string;
+  checkedColor?: string;
+  callbackFunc?: (checked: boolean) => void;
+};
+
+const Switch = ({ size, uncheckedColor, checkedColor, callbackFunc }: SwitchProps) => {
   const [checked, setChecked] = useState(false);
   return (
     <Label>
@@ -87,13 +93,6 @@ Switch.defaultProps = {
   uncheckedColor: '#ff0000',
   checkedColor: '#00ff00',
   callbackFunc: () => {},
-};
-
-Switch.propTypes = {
-  size: PropTypes.number,
-  uncheckedColor: PropTypes.string,
-  checkedColor: PropTypes.string,
-  callbackFunc: PropTypes.func,
 };
 
 export default Switch;

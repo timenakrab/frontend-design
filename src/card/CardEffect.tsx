@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
@@ -161,7 +160,13 @@ const EffectFour = styled.span`
   }
 `;
 
-const CardEffect = ({ no, title, desc, link }) => {
+type CardEffectProps = {
+  no: string | number;
+  title: string;
+  desc: string;
+  link?: string;
+};
+const CardEffect = ({ no, title, desc, link }: CardEffectProps) => {
   return (
     <Card>
       <EffectOne />
@@ -180,13 +185,6 @@ const CardEffect = ({ no, title, desc, link }) => {
 
 CardEffect.defaultProps = {
   link: '/#',
-};
-
-CardEffect.propTypes = {
-  no: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  title: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired,
-  link: PropTypes.string,
 };
 
 export default CardEffect;

@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import CardProduct from '../src/card/CardProduct';
+import CodePreview from '../src/CodePreview';
 
 const Root = styled.div`
   display: flex;
@@ -34,6 +35,23 @@ const CardProductPage = () => {
           link="https://www.mentagram.com/"
         />
       </Container>
+      <CodePreview
+        language="tsx"
+        codeString={`
+        import CardProduct from '../src/card/CardProduct';
+        ...
+        <CardProduct title="headphone" price={2990} />
+        <CardProduct title="headphone" price={4000} color="#2196f3" />
+        <CardProduct
+          title="headphone"
+          price={3500}
+          satang={50}
+          color="#e01d1d"
+          link="https://www.mentagram.com/"
+        />
+        ...
+        `}
+      />
     </Root>
   );
 };

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -101,7 +100,15 @@ const BuyNow = styled.a<{ bgColor: string }>`
   }
 `;
 
-const CardProduct = ({ title, price, satang, color, link }) => {
+type CardProductProps = {
+  title: string;
+  price: number;
+  satang?: number;
+  color?: string;
+  link?: string;
+};
+
+const CardProduct = ({ title, price, satang, color, link }: CardProductProps) => {
   return (
     <Card bgColor={color}>
       <BlockProductImg>
@@ -125,14 +132,6 @@ CardProduct.defaultProps = {
   color: '#8a8a8a',
   link: '/#',
   satang: 0,
-};
-
-CardProduct.propTypes = {
-  title: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  satang: PropTypes.number,
-  color: PropTypes.string,
-  link: PropTypes.string,
 };
 
 export default CardProduct;
