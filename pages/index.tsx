@@ -1,10 +1,12 @@
 import React from 'react';
 
+import MainLayout from '../src/MainLayout';
+
 const HomePage = () => {
   return (
-    <div>
-      <h1>Hello Design</h1>
-    </div>
+    <MainLayout>
+      <p>Waiting For Update</p>
+    </MainLayout>
   );
 };
 
