@@ -2,8 +2,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import CardProduct from '../src/card/CardProduct';
-import CodePreview from '../src/CodePreview';
+import CardProduct from '../../src/card/CardProduct';
+import CodePreview from '../../src/CodePreview';
 
 const Root = styled.div`
   display: flex;

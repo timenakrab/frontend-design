@@ -2,8 +2,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Card from '../src/card/CardEffect';
-import CodePreview from '../src/CodePreview';
+import CardEffect from '../../src/card/CardEffect';
+import CodePreview from '../../src/CodePreview';
 
 const Root = styled.div`
   display: flex;
@@ -25,19 +25,19 @@ const CardHoverEffect = () => {
   return (
     <Root>
       <Container>
-        <Card
+        <CardEffect
           no="01"
           title="Post Title"
           desc="เช็งเม้งช็อค โครนาเซฟตี้ ติงต๊องโจ๋ เคลียร์เลดี้นิรันดร์"
           link="/"
         />
-        <Card
+        <CardEffect
           no="02"
           title="Post Title"
           desc="ไมเกรน โอวัลตินคาสิโนเซลส์แมนพรีเมียมสเตเดียม วโรกาสคาสิโนโค้ชเบิร์น"
           link="https://www.google.com"
         />
-        <Card
+        <CardEffect
           no="03"
           title="Post Title"
           desc="แซ็กรีดไถเดชานุภาพบ๊วย รีโมตทีวี โต๋เต๋วอลซ์ซาดิสม์ สปอร์ตซัพพลายเออร์ซิ้ม"

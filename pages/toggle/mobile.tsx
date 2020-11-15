@@ -2,8 +2,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import CodePreview from '../src/CodePreview';
-import SwitchMobile from '../src/switch-page/SwitchMobile';
+import CodePreview from '../../src/CodePreview';
+import SwitchMobile from '../../src/switch-page/SwitchMobile';
 
 const Root = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ const Container = styled.div`
   flex-wrap: wrap;
 `;
 
-const Switch = () => {
+const ToggleMobile = () => {
   return (
     <Root>
       <Container>
@@ -45,6 +45,6 @@ const Switch = () => {
   );
 };
 
-Switch.propTypes = {};
+ToggleMobile.propTypes = {};
 
-export default Switch;
+export default ToggleMobile;

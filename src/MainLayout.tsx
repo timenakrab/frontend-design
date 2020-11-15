@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -45,6 +46,11 @@ const NavbarItem = styled.li`
   width: 100%;
   &:last-child {
     margin-top: auto;
+  }
+  @media (min-width: 600px) {
+    &:nth-child(2) {
+      display: none;
+    }
   }
 `;
 const NavberLink = styled.a`
@@ -123,39 +129,49 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
       <Navbar>
-        <NavbarNav className="navbar-nav">
+        <NavbarNav>
           <Logo>
-            <NavberLink href="/">
-              <LinkText className="link-text">Time Pai Ruey</LinkText>
-              <IconLogo className="fas fa-angle-double-right" />
-            </NavberLink>
+            <Link href="/">
+              <NavberLink href="/">
+                <LinkText>Time Pai Ruey</LinkText>
+                <IconLogo className="fas fa-angle-double-right" />
+              </NavberLink>
+            </Link>
           </Logo>
-          <NavbarItem className="navbar-item">
-            <NavberLink className="navbar-link" href="/">
-              <Icon className="fas fa-home" />
-              <LinkText className="link-text">home</LinkText>
-            </NavberLink>
+          <NavbarItem>
+            <Link href="/">
+              <NavberLink href="/">
+                <Icon className="fas fa-home" />
+                <LinkText>home</LinkText>
+              </NavberLink>
+            </Link>
           </NavbarItem>
           <NavbarItem>
-            <NavberLink href="/">
-              <Icon className="far fa-id-card" />
-              <LinkText>card</LinkText>
-            </NavberLink>
+            <Link href="/card">
+              <NavberLink href="/card">
+                <Icon className="far fa-id-card" />
+                <LinkText>card</LinkText>
+              </NavberLink>
+            </Link>
           </NavbarItem>
           <NavbarItem>
-            <NavberLink href="/">
-              <Icon className="far fa-hand-point-up" />
-              <LinkText>button</LinkText>
-            </NavberLink>
+            <Link href="/button">
+              <NavberLink href="/button">
+                <Icon className="far fa-hand-point-up" />
+                <LinkText>button</LinkText>
+              </NavberLink>
+            </Link>
           </NavbarItem>
           <NavbarItem>
-            <NavberLink href="/">
-              <Icon className="fas fa-toggle-on" />
-              <LinkText>toggle</LinkText>
-            </NavberLink>
+            <Link href="/toggle">
+              <NavberLink href="/toggle">
+                <Icon className="fas fa-toggle-on" />
+                <LinkText>toggle</LinkText>
+              </NavberLink>
+            </Link>
           </NavbarItem>
           <NavbarItem>
-            <NavberLink href="https://www.facebook.com/TimePaiRuey">
+            <NavberLink href="https://www.facebook.com/TimePaiRuey" target="_blank">
               <Icon className="fab fa-facebook" />
               <LinkText>FB PAGE</LinkText>
             </NavberLink>

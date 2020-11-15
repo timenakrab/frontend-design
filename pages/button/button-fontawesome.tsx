@@ -2,8 +2,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ButtonIconFA from '../src/button/ButtonIconFA';
-import CodePreview from '../src/CodePreview';
+import ButtonIconFA from '../../src/button/ButtonIconFA';
+import CodePreview from '../../src/CodePreview';
 
 const Root = styled.div`
   display: flex;
