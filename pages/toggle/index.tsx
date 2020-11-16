@@ -1,13 +1,18 @@
+import { NextRouter } from 'next/router';
 import React from 'react';
 
 import MainLayout from '../../src/MainLayout';
 
-const SwitchPage = () => {
+type TogglePageProps = {
+  router: NextRouter;
+};
+
+const TogglePage = ({ router }: TogglePageProps) => {
   return (
-    <MainLayout>
+    <MainLayout pathname={router.pathname}>
       <p>Waiting For Update</p>
     </MainLayout>
   );
 };
 
-export default SwitchPage;
+export default TogglePage;

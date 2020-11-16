@@ -5,6 +5,7 @@ import { ChildrenProps } from './type/custom';
 
 const Container = styled.div<{ flexDirection: 'row' | 'column' }>`
   width: 100%;
+  /* padding: 16px; */
   display: flex;
   flex-direction: ${(props) => props.flexDirection};
   justify-content: center;

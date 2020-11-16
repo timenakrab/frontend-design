@@ -53,12 +53,14 @@ const NavbarItem = styled.li`
     }
   }
 `;
-const NavberLink = styled.a`
+const NavberLink = styled.a<{ active: boolean }>`
   display: flex;
   align-items: center;
   height: 5rem;
   text-decoration: none;
-  filter: grayscale(100%) opacity(0.7);
+  filter: ${(props) =>
+    props.active ? 'grayscale(0%) opacity(1)' : 'grayscale(100%) opacity(0.7)'};
+  background-color: ${(props) => (props.active ? '#41436a' : 'transparent')};
   &:hover {
     filter: grayscale(0%) opacity(1);
     background-color: #41436a;
@@ -122,10 +124,11 @@ const IconLogo = styled.i`
 `;
 
 type MainLayoutProps = {
+  pathname?: string;
   children: ChildrenProps;
 };
 
-const MainLayout = ({ children }: MainLayoutProps) => {
+const MainLayout = ({ pathname, children }: MainLayoutProps) => {
   return (
     <>
       <Navbar>
@@ -140,7 +143,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           </Logo>
           <NavbarItem>
             <Link href="/">
-              <NavberLink href="/">
+              <NavberLink href="/" active={pathname === '/'}>
                 <Icon className="fas fa-home" />
                 <LinkText>home</LinkText>
               </NavberLink>
@@ -148,7 +151,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           </NavbarItem>
           <NavbarItem>
             <Link href="/card">
-              <NavberLink href="/card">
+              <NavberLink href="/card" active={pathname === '/card'}>
                 <Icon className="far fa-id-card" />
                 <LinkText>card</LinkText>
               </NavberLink>
@@ -156,7 +159,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           </NavbarItem>
           <NavbarItem>
             <Link href="/button">
-              <NavberLink href="/button">
+              <NavberLink href="/button" active={pathname === '/button'}>
                 <Icon className="far fa-hand-point-up" />
                 <LinkText>button</LinkText>
               </NavberLink>
@@ -164,14 +167,18 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           </NavbarItem>
           <NavbarItem>
             <Link href="/toggle">
-              <NavberLink href="/toggle">
+              <NavberLink href="/toggle" active={pathname === '/toggle'}>
                 <Icon className="fas fa-toggle-on" />
                 <LinkText>toggle</LinkText>
               </NavberLink>
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <NavberLink href="https://www.facebook.com/TimePaiRuey" target="_blank">
+            <NavberLink
+              href="https://www.facebook.com/TimePaiRuey"
+              target="_blank"
+              active={pathname === 'https://www.facebook.com/TimePaiRuey'}
+            >
               <Icon className="fab fa-facebook" />
               <LinkText>FB PAGE</LinkText>
             </NavberLink>
@@ -181,6 +188,10 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <Main>{children}</Main>
     </>
   );
+};
+
+MainLayout.defaultProps = {
+  pathname: '',
 };
 
 export default MainLayout;
