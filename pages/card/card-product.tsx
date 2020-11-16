@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import CardProduct from '../../src/card/CardProduct';
 import CodePreview from '../../src/CodePreview';
+import ContainerFlex from '../../src/ContainerFlex';
 
 const Root = styled.div`
   display: flex;
@@ -13,18 +14,11 @@ const Root = styled.div`
   flex-direction: column;
   background-color: #09161d;
 `;
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-`;
 
 const CardProductPage = () => {
   return (
     <Root>
-      <Container>
+      <ContainerFlex flexDirection="row">
         <CardProduct title="headphone" price={2990} />
         <CardProduct title="headphone" price={4000} color="#2196f3" />
         <CardProduct
@@ -34,7 +28,7 @@ const CardProductPage = () => {
           color="#e01d1d"
           link="https://www.mentagram.com/"
         />
-      </Container>
+      </ContainerFlex>
       <CodePreview
         language="tsx"
         codeString={`

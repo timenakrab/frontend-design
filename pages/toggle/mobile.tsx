@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import CodePreview from '../../src/CodePreview';
+import ContainerFlex from '../../src/ContainerFlex';
 import SwitchMobile from '../../src/switch-page/SwitchMobile';
 
 const Root = styled.div`
@@ -13,23 +14,15 @@ const Root = styled.div`
   flex-direction: column;
   background-color: #2b2b2b;
 `;
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-`;
 
 const ToggleMobile = () => {
   return (
     <Root>
-      <Container>
+      <ContainerFlex flexDirection="column">
         <SwitchMobile />
         <SwitchMobile size={60} />
         <SwitchMobile size={100} uncheckedColor="grey" checkedColor="white" />
-      </Container>
+      </ContainerFlex>
       <CodePreview
         language="tsx"
         codeString={`

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import CardEffect from '../../src/card/CardEffect';
 import CodePreview from '../../src/CodePreview';
+import ContainerFlex from '../../src/ContainerFlex';
 
 const Root = styled.div`
   display: flex;
@@ -13,18 +14,11 @@ const Root = styled.div`
   flex-direction: column;
   background-color: #08001b;
 `;
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-`;
 
 const CardHoverEffect = () => {
   return (
     <Root>
-      <Container>
+      <ContainerFlex flexDirection="row">
         <CardEffect
           no="01"
           title="Post Title"
@@ -43,7 +37,7 @@ const CardHoverEffect = () => {
           desc="แซ็กรีดไถเดชานุภาพบ๊วย รีโมตทีวี โต๋เต๋วอลซ์ซาดิสม์ สปอร์ตซัพพลายเออร์ซิ้ม"
           link="https://www.facebook.com"
         />
-      </Container>
+      </ContainerFlex>
       <CodePreview
         language="tsx"
         codeString={`
