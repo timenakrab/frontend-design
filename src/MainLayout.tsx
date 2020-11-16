@@ -53,7 +53,7 @@ const NavbarItem = styled.li`
     }
   }
 `;
-const NavberLink = styled.a<{ active: boolean }>`
+const NavberLink = styled.a<{ active?: boolean }>`
   display: flex;
   align-items: center;
   height: 5rem;
@@ -174,11 +174,7 @@ const MainLayout = ({ pathname, children }: MainLayoutProps) => {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <NavberLink
-              href="https://www.facebook.com/TimePaiRuey"
-              target="_blank"
-              active={pathname === 'https://www.facebook.com/TimePaiRuey'}
-            >
+            <NavberLink href="https://www.facebook.com/TimePaiRuey" target="_blank">
               <Icon className="fab fa-facebook" />
               <LinkText>FB PAGE</LinkText>
             </NavberLink>
