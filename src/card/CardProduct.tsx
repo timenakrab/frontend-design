@@ -4,12 +4,11 @@ import styled from 'styled-components';
 const Card = styled.div<{ bgColor: string }>`
   font-family: 'kanit', sans-serif;
   position: relative;
-  width: 320px;
+  width: 300px;
   height: 420px;
   background-color: #122936;
   border-radius: 20px;
   overflow: hidden;
-  margin: 16px;
   &::before {
     content: '';
     position: absolute;

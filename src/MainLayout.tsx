@@ -10,10 +10,12 @@ const Main = styled.main`
   min-height: 100vh;
   @media (max-width: 600px) {
     margin: 0px;
+    margin-bottom: 5rem;
   }
 `;
 const Navbar = styled.nav`
   position: fixed;
+  z-index: 10000;
   background-color: #2a3950;
   transition: width 200ms ease;
   @media (max-width: 600px) {

@@ -14,34 +14,41 @@ const Root = styled.div`
   flex-direction: column;
   background-color: #09161d;
 `;
+const WarpCard = styled.div`
+  margin: 8px;
+`;
 
 const CardProductPage = () => {
   return (
     <Root>
-      <ContainerFlex flexDirection="row">
-        <CardProduct title="headphone" price={2990} />
-        <CardProduct title="headphone" price={4000} color="#2196f3" />
-        <CardProduct
-          title="headphone"
-          price={3500}
-          satang={50}
-          color="#e01d1d"
-          link="https://www.mentagram.com/"
-        />
+      <ContainerFlex flexDirection="row" backgroundColor="transparent">
+        <WarpCard>
+          <CardProduct title="headphone" price={2990} />
+        </WarpCard>
+        <WarpCard>
+          <CardProduct title="headphone" price={4000} color="#2196f3" />
+        </WarpCard>
+        <WarpCard>
+          <CardProduct
+            title="headphone"
+            price={3500}
+            satang={50}
+            color="#e01d1d"
+            link="https://www.google.com/"
+          />
+        </WarpCard>
       </ContainerFlex>
       <CodePreview
         language="tsx"
         codeString={`
         import CardProduct from '../src/card/CardProduct';
         ...
-        <CardProduct title="headphone" price={2990} />
-        <CardProduct title="headphone" price={4000} color="#2196f3" />
         <CardProduct
           title="headphone"
           price={3500}
           satang={50}
           color="#e01d1d"
-          link="https://www.mentagram.com/"
+          link="https://www.google.com/"
         />
         ...
         `}

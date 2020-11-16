@@ -13,9 +13,10 @@ const SectionCode = styled.div`
 interface CodePreviewProps {
   language: string;
   codeString: string;
+  customStyles?: React.CSSProperties;
 }
 
-const CodePreview = ({ language, codeString }: CodePreviewProps) => {
+const CodePreview = ({ language, codeString, customStyles }: CodePreviewProps) => {
   const [style, setStyle] = useState(null);
 
   function trimCode(code: string) {
@@ -35,12 +36,16 @@ const CodePreview = ({ language, codeString }: CodePreviewProps) => {
     return <NoStyle>{CodeDisplay}</NoStyle>;
   }
   return (
-    <SectionCode>
+    <SectionCode style={{ ...customStyles }}>
       <SyntaxHighlighter language={language} style={style} customStyle={{ margin: 0 }}>
         {CodeDisplay}
       </SyntaxHighlighter>
     </SectionCode>
   );
+};
+
+CodePreview.defaultProps = {
+  customStyles: {},
 };
 
 export default CodePreview;

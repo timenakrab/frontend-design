@@ -10,7 +10,6 @@ const Card = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px;
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   opacity: 0.5;
@@ -59,8 +58,16 @@ const Title = styled.h3`
   }
 `;
 const Description = styled.p`
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  min-height: calc(24px);
+  max-height: calc(48px);
+  height: auto;
+  font-size: 16px;
+  line-height: 24px;
   position: relative;
-  font-size: 1em;
+  overflow: hidden;
   color: #ffffff;
   z-index: 2;
   opacity: 0.5;
