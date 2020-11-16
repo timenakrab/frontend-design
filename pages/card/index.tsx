@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import CardEffect from '../../src/card/CardEffect';
 import CardProduct from '../../src/card/CardProduct';
 import CodePreview from '../../src/CodePreview';
+import Divider from '../../src/Divider';
 import MainLayout from '../../src/MainLayout';
 import Text from '../../src/Text';
 
@@ -13,7 +14,7 @@ const WarpCardProduct = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 24px;
+  margin: 16px 0px;
 `;
 const SectionCardProduct = styled.div`
   width: 320px;
@@ -32,7 +33,11 @@ const SectionCode = styled.div`
   }
 `;
 const SectionLinkExample = styled.div`
-  margin: 8px 0px;
+  display: flex;
+  margin: 16px 0px;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 const LinkExample = styled.a`
   font-size: 18px;
@@ -40,7 +45,6 @@ const LinkExample = styled.a`
   font-family: 'Kanit';
   color: #ff9678;
   text-transform: uppercase;
-  margin: 8px 0px;
 `;
 
 type CardPageProps = {
@@ -84,6 +88,7 @@ const CardPage = ({ router }: CardPageProps) => {
           </SectionLinkExample>
         </SectionCode>
       </WarpCardProduct>
+      <Divider />
       <WarpCardProduct>
         <SectionCardProduct>
           <CardEffect
