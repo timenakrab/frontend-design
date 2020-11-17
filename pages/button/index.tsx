@@ -60,7 +60,7 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
       </Text>
       <Divider />
       <Text h2 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
-        button (hover effects)
+        Anchor (hover effects)
       </Text>
       <WarpButtonComp>
         <SectionButton>
@@ -92,7 +92,6 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
               /** icon with https://fontawesome.com **
                * default bgColor = #ffffff
                * default link = /#
-               * default onClick = () => {} 
                **************************************/
             `}
             customStyles={{ padding: 0 }}
@@ -112,11 +111,6 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
               {
                 name: 'link',
                 type: 'string',
-                require: false,
-              },
-              {
-                name: 'onClick',
-                type: 'function',
                 require: false,
               },
             ]}

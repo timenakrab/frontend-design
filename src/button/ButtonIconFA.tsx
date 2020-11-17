@@ -42,12 +42,11 @@ type ButtonIconFAProps = {
   link?: string;
   icon: string;
   bgColor?: string;
-  onClick?: () => void;
 };
 
-const ButtonIconFA = ({ link, icon, bgColor, onClick }: ButtonIconFAProps): ReactElement => {
+const ButtonIconFA = ({ link, icon, bgColor }: ButtonIconFAProps): ReactElement => {
   return (
-    <Button href={link} bgColor={bgColor} onClick={() => onClick()}>
+    <Button href={link} bgColor={bgColor}>
       <Icon className={`fab ${icon}`} />
     </Button>
   );
@@ -56,7 +55,6 @@ const ButtonIconFA = ({ link, icon, bgColor, onClick }: ButtonIconFAProps): Reac
 ButtonIconFA.defaultProps = {
   link: '/#',
   bgColor: '#ffffff',
-  onClick: () => {},
 };
 
 export default ButtonIconFA;
