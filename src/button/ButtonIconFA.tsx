@@ -9,7 +9,6 @@ const Button = styled.a<{ bgColor: string }>`
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  margin: 0px 12px;
   text-decoration: none;
   font-size: 30px;
   border-radius: 50%;
@@ -43,11 +42,12 @@ type ButtonIconFAProps = {
   link?: string;
   icon: string;
   bgColor?: string;
+  onClick?: () => void;
 };
 
-const ButtonIconFA = ({ link, icon, bgColor }: ButtonIconFAProps): ReactElement => {
+const ButtonIconFA = ({ link, icon, bgColor, onClick }: ButtonIconFAProps): ReactElement => {
   return (
-    <Button href={link} bgColor={bgColor}>
+    <Button href={link} bgColor={bgColor} onClick={() => onClick()}>
       <Icon className={`fab ${icon}`} />
     </Button>
   );
@@ -56,6 +56,7 @@ const ButtonIconFA = ({ link, icon, bgColor }: ButtonIconFAProps): ReactElement 
 ButtonIconFA.defaultProps = {
   link: '/#',
   bgColor: '#ffffff',
+  onClick: () => {},
 };
 
 export default ButtonIconFA;

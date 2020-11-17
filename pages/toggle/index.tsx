@@ -10,7 +10,7 @@ import TableRequirefield from '../../src/TableRequirefield';
 import Text from '../../src/Text';
 import SwitchMobile from '../../src/toggle/SwitchMobile';
 
-const WarpToggleProduct = styled.div`
+const WarpToggleComp = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -61,7 +61,7 @@ const TogglePage = ({ router }: TogglePageProps) => {
       <Text h2 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         toggle (design with mobile)
       </Text>
-      <WarpToggleProduct>
+      <WarpToggleComp>
         <SectionToggle>
           <WarpToggle>
             <SwitchMobile size={30} />
@@ -73,6 +73,7 @@ const TogglePage = ({ router }: TogglePageProps) => {
             <SwitchMobile
               uncheckedColor="grey"
               checkedColor="white"
+              // eslint-disable-next-line no-alert
               callbackFunc={(checked) => alert(checked)}
             />
           </WarpToggle>
@@ -129,7 +130,7 @@ const TogglePage = ({ router }: TogglePageProps) => {
             </LinkExample>
           </SectionLinkExample>
         </SectionCode>
-      </WarpToggleProduct>
+      </WarpToggleComp>
     </MainLayout>
   );
 };
