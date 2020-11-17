@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import CodePreview from '../../src/CodePreview';
 import ContainerFlex from '../../src/ContainerFlex';
-import SwitchMobile from '../../src/switch-page/SwitchMobile';
+import SwitchMobile from '../../src/toggle/SwitchMobile';
 
 const Root = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ const Root = styled.div`
 const ToggleMobile = () => {
   return (
     <Root>
-      <ContainerFlex flexDirection="column">
+      <ContainerFlex flexDirection="column" backgroundColor="transparent">
         <SwitchMobile />
         <SwitchMobile size={60} />
         <SwitchMobile size={100} uncheckedColor="grey" checkedColor="white" />
@@ -26,11 +26,15 @@ const ToggleMobile = () => {
       <CodePreview
         language="tsx"
         codeString={`
-        import SwitchMobile from '../src/switch-page/SwitchMobile';
+        import SwitchMobile from '../src/toggle/SwitchMobile';
         ...
         <SwitchMobile />
         <SwitchMobile size={60} />
-        <SwitchMobile size={100} uncheckedColor="grey" checkedColor="white" />
+        <SwitchMobile
+          size={100}
+          uncheckedColor="grey"
+          checkedColor="white"
+        />
         ...
         `}
       />
