@@ -27,7 +27,7 @@ const ButtonHoverBorder = () => {
           </ButtonHover>
         </WarpButton>
         <WarpButton>
-          <ButtonHover twoLine backgroundColor="#f54785" lineColor="#98073b" textColor="#ffffff">
+          <ButtonHover twoLine backgroundColor="#41436a" lineColor="#f54768" textColor="#ff9678">
             Hover Two Line
           </ButtonHover>
         </WarpButton>

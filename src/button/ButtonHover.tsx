@@ -263,9 +263,14 @@ const ButtonHover = ({
     );
   }
   return (
-    <TwoLineButton backgroundColor={backgroundColor} lineColor={lineColor} textColor={textColor}>
-      <ChildTwo lineColor={lineColor}>{children}</ChildTwo>
-    </TwoLineButton>
+    <OneLineButton
+      backgroundColor={backgroundColor}
+      lineColor={lineColor}
+      textColor={textColor}
+      onClick={() => console.log('click')}
+    >
+      <ChildOne lineColor={lineColor}>{children}</ChildOne>
+    </OneLineButton>
   );
 };
 

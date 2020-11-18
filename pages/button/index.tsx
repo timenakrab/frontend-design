@@ -3,6 +3,7 @@ import { NextRouter } from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
 
+import ButtonHover from '../../src/button/ButtonHover';
 import ButtonIconFA from '../../src/button/ButtonIconFA';
 import CodePreview from '../../src/CodePreview';
 import Divider from '../../src/Divider';
@@ -125,6 +126,79 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
           </SectionLinkExample>
         </SectionCode>
       </WarpButtonComp>
+      <Divider line="wave" />
+      <Text h2 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+        Button (border hover effects)
+      </Text>
+      <WarpButtonComp>
+        <SectionButton>
+          <WarpButton>
+            <ButtonHover oneLine backgroundColor="#f54785" lineColor="#98073b" textColor="#ffffff">
+              Hover One Line
+            </ButtonHover>
+          </WarpButton>
+          <WarpButton>
+            <ButtonHover twoLine backgroundColor="#f54785" lineColor="#98073b" textColor="#ffffff">
+              Hover Two Line
+            </ButtonHover>
+          </WarpButton>
+          <WarpButton>
+            <ButtonHover fourLine backgroundColor="#f54785" lineColor="#98073b" textColor="#ffffff">
+              Hover Four Line
+            </ButtonHover>
+          </WarpButton>
+        </SectionButton>
+        <SectionCode>
+          <CodePreview
+            language="tsx"
+            codeString={`
+            <ButtonHover
+              oneLine
+              backgroundColor="#f54785"
+              lineColor="#98073b"
+              textColor="#ffffff"
+            >
+              Hover Four Line
+            </ButtonHover>
+              /** icon with https://fontawesome.com **
+               * default line = oneLine
+               * default backgroundColor = #d0d0d0
+               * default textColor = #000000
+               * default lineColor = #fbfbfb
+               **************************************/
+            `}
+            customStyles={{ padding: 0 }}
+          />
+          <TableRequirefield
+            body={[
+              {
+                name: 'icon',
+                type: 'string',
+                require: true,
+              },
+              {
+                name: 'bgColor',
+                type: 'string',
+                require: false,
+              },
+              {
+                name: 'link',
+                type: 'string',
+                require: false,
+              },
+            ]}
+          />
+          <SectionLinkExample>
+            <Link href="/button/button-hover-border">
+              <LinkExample href="/button/button-hover-border">example preview</LinkExample>
+            </Link>
+            <LinkExample href={`${SOURCE_CODE_LINK}/src/button/ButtonHover.tsx`} target="_blank">
+              source code
+            </LinkExample>
+          </SectionLinkExample>
+        </SectionCode>
+      </WarpButtonComp>
+      <Divider line="wave" />
     </MainLayout>
   );
 };
