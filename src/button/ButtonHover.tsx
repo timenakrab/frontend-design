@@ -11,7 +11,6 @@ type ButtonProps = {
 const OneLineButton = styled.button<ButtonProps>`
   display: inline-block;
   position: relative;
-  border: none;
   color: ${(props) => props.textColor};
   font-family: 'Kanit';
   font-size: 18px;
@@ -87,7 +86,6 @@ const ChildOne = styled.span<ButtonProps>`
 const TwoLineButton = styled.button<ButtonProps>`
   display: inline-block;
   position: relative;
-  border: none;
   color: ${(props) => props.textColor};
   font-family: 'Kanit';
   font-size: 18px;
@@ -156,7 +154,6 @@ const ChildTwo = styled.span<ButtonProps>`
 const FourLineButton = styled.button<ButtonProps>`
   display: inline-block;
   position: relative;
-  border: none;
   color: ${(props) => props.textColor};
   font-family: 'Kanit';
   font-size: 18px;
@@ -222,7 +219,7 @@ const ChildFour = styled.span<ButtonProps>`
   }
 `;
 
-interface ButtonHoverProps {
+interface ButtonHoverProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: string | ChildrenProps;
   textColor?: string;
   backgroundColor?: string;
@@ -232,42 +229,54 @@ interface ButtonHoverProps {
   fourLine?: boolean;
 }
 
-const ButtonHover = ({
-  oneLine,
-  twoLine,
-  fourLine,
-  children,
-  textColor,
-  backgroundColor,
-  lineColor,
-}: ButtonHoverProps) => {
+const ButtonHover: React.FC<ButtonHoverProps> = (props: ButtonHoverProps) => {
+  const { oneLine, twoLine, fourLine, children, textColor, backgroundColor, lineColor } = props;
   if (oneLine) {
     return (
-      <OneLineButton backgroundColor={backgroundColor} lineColor={lineColor} textColor={textColor}>
+      <OneLineButton
+        /* eslint-disable-next-line react/jsx-props-no-spreading */
+        {...props}
+        backgroundColor={backgroundColor}
+        lineColor={lineColor}
+        textColor={textColor}
+      >
         <ChildOne lineColor={lineColor}>{children}</ChildOne>
       </OneLineButton>
     );
   }
   if (twoLine) {
     return (
-      <TwoLineButton backgroundColor={backgroundColor} lineColor={lineColor} textColor={textColor}>
+      <TwoLineButton
+        /* eslint-disable-next-line react/jsx-props-no-spreading */
+        {...props}
+        backgroundColor={backgroundColor}
+        lineColor={lineColor}
+        textColor={textColor}
+      >
         <ChildTwo lineColor={lineColor}>{children}</ChildTwo>
       </TwoLineButton>
     );
   }
   if (fourLine) {
     return (
-      <FourLineButton backgroundColor={backgroundColor} lineColor={lineColor} textColor={textColor}>
+      <FourLineButton
+        /* eslint-disable-next-line react/jsx-props-no-spreading */
+        {...props}
+        backgroundColor={backgroundColor}
+        lineColor={lineColor}
+        textColor={textColor}
+      >
         <ChildFour lineColor={lineColor}>{children}</ChildFour>
       </FourLineButton>
     );
   }
   return (
     <OneLineButton
+      /* eslint-disable-next-line react/jsx-props-no-spreading */
+      {...props}
       backgroundColor={backgroundColor}
       lineColor={lineColor}
       textColor={textColor}
-      onClick={() => console.log('click')}
     >
       <ChildOne lineColor={lineColor}>{children}</ChildOne>
     </OneLineButton>
@@ -277,7 +286,7 @@ const ButtonHover = ({
 ButtonHover.defaultProps = {
   textColor: '#000000',
   backgroundColor: '#d0d0d0',
-  lineColor: '#fbfbfb',
+  lineColor: '#000000',
   oneLine: false,
   twoLine: false,
   fourLine: false,

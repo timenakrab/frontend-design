@@ -22,17 +22,29 @@ const ButtonHoverBorder = () => {
     <Root>
       <ContainerFlex flexDirection="row" backgroundColor="transparent">
         <WarpButton>
-          <ButtonHover oneLine backgroundColor="#f54785" lineColor="#98073b" textColor="#ffffff">
+          <ButtonHover oneLine className="remove-border-color-button">
             Hover One Line
           </ButtonHover>
         </WarpButton>
         <WarpButton>
-          <ButtonHover twoLine backgroundColor="#41436a" lineColor="#f54768" textColor="#ff9678">
+          <ButtonHover
+            twoLine
+            backgroundColor="#41436a"
+            lineColor="#f54768"
+            textColor="#ff9678"
+            className="remove-border-color-button"
+          >
             Hover Two Line
           </ButtonHover>
         </WarpButton>
         <WarpButton>
-          <ButtonHover fourLine backgroundColor="#f54785" lineColor="#98073b" textColor="#ffffff">
+          <ButtonHover
+            fourLine
+            backgroundColor="#ffe3b3"
+            lineColor="#dd4470"
+            textColor="#fe72a9"
+            className="remove-border-color-button"
+          >
             Hover Four Line
           </ButtonHover>
         </WarpButton>
@@ -41,17 +53,15 @@ const ButtonHoverBorder = () => {
         language="tsx"
         codeString={`
         ...
-        <ButtonHover oneLine backgroundColor="#f54785" lineColor="#98073b" textColor="#ffffff">
-          Hover One Line
-        </ButtonHover>
-        ...
-        <ButtonHover twoLine backgroundColor="#f54785" lineColor="#98073b" textColor="#ffffff">
-          Hover Two Line
-        </ButtonHover>
-        ...
-        <ButtonHover fourLine backgroundColor="#f54785" lineColor="#98073b" textColor="#ffffff">
-          Hover Four Line
-        </ButtonHover>
+          <ButtonHover
+            fourLine
+            backgroundColor="#ffe3b3"
+            lineColor="#dd4470"
+            textColor="#fe72a9"
+            className="remove-border-color-button"
+          >
+            Hover Four Line
+          </ButtonHover>
         ...
         `}
         customStyles={{ width: '100%', display: 'flex', justifyContent: 'center' }}

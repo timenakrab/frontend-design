@@ -133,17 +133,30 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
       <WarpButtonComp>
         <SectionButton>
           <WarpButton>
-            <ButtonHover oneLine backgroundColor="#f54785" lineColor="#98073b" textColor="#ffffff">
+            <ButtonHover oneLine className="remove-border-color-button">
               Hover One Line
             </ButtonHover>
           </WarpButton>
           <WarpButton>
-            <ButtonHover twoLine backgroundColor="#f54785" lineColor="#98073b" textColor="#ffffff">
+            <ButtonHover
+              twoLine
+              backgroundColor="#41436a"
+              lineColor="#f54768"
+              textColor="#ff9678"
+              className="remove-border-color-button"
+            >
               Hover Two Line
             </ButtonHover>
           </WarpButton>
           <WarpButton>
-            <ButtonHover fourLine backgroundColor="#f54785" lineColor="#98073b" textColor="#ffffff">
+            <ButtonHover
+              fourLine
+              backgroundColor="#ffe3b3"
+              lineColor="#dd4470"
+              textColor="#fe72a9"
+              className="remove-border-color-button"
+              onClick={() => alert('onClick Four Line')}
+            >
               Hover Four Line
             </ButtonHover>
           </WarpButton>
@@ -153,18 +166,18 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
             language="tsx"
             codeString={`
             <ButtonHover
-              oneLine
-              backgroundColor="#f54785"
-              lineColor="#98073b"
-              textColor="#ffffff"
+              backgroundColor="#ffe3b3"
+              lineColor="#dd4470"
+              textColor="#fe72a9"
+              fourLine
             >
               Hover Four Line
             </ButtonHover>
-              /** icon with https://fontawesome.com **
-               * default line = oneLine
+              /**************************************
                * default backgroundColor = #d0d0d0
                * default textColor = #000000
-               * default lineColor = #fbfbfb
+               * default lineColor = #000000
+               * default oneLine (oneLine, twoLine, fourLine)
                **************************************/
             `}
             customStyles={{ padding: 0 }}
@@ -172,18 +185,33 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
           <TableRequirefield
             body={[
               {
-                name: 'icon',
-                type: 'string',
-                require: true,
-              },
-              {
-                name: 'bgColor',
+                name: 'backgroundColor',
                 type: 'string',
                 require: false,
               },
               {
-                name: 'link',
+                name: 'textColor',
                 type: 'string',
+                require: false,
+              },
+              {
+                name: 'lineColor',
+                type: 'string',
+                require: false,
+              },
+              {
+                name: 'oneLine',
+                type: 'boolean',
+                require: false,
+              },
+              {
+                name: 'twoLine',
+                type: 'boolean',
+                require: false,
+              },
+              {
+                name: 'fourLine',
+                type: 'boolean',
                 require: false,
               },
             ]}

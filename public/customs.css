@@ -13,3 +13,17 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #6649b8;
 }
+
+.remove-border-color-button {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: 0px solid transparent !important;
+}
+
+.remove-border-color-button:focus {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: 0px solid transparent !important;
+}
