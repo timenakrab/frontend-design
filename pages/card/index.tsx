@@ -50,7 +50,7 @@ const LinkExample = styled.a`
   text-transform: uppercase;
   margin: 4px;
 `;
-const SOURCE_CODE_LINK = 'https://raw.githubusercontent.com/timenakrab/frontend-design/master';
+const SOURCE_CODE_LINK = 'https://github.com/timenakrab/frontend-design/blob/master';
 
 type CardPageProps = {
   router: NextRouter;

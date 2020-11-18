@@ -47,7 +47,7 @@ const LinkExample = styled.a`
 const WarpButton = styled.div`
   margin: 8px;
 `;
-const SOURCE_CODE_LINK = 'https://raw.githubusercontent.com/timenakrab/frontend-design/master';
+const SOURCE_CODE_LINK = 'https://github.com/timenakrab/frontend-design/blob/master';
 
 type ButtonPageProps = {
   router: NextRouter;
