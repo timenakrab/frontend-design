@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ButtonHover from '../../src/button/ButtonHover';
+import ButtonHover from '../../src/button/ButtonHoverBorder';
 import CodePreview from '../../src/CodePreview';
 import ContainerFlex from '../../src/ContainerFlex';
 

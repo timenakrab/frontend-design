@@ -3,7 +3,7 @@ import { NextRouter } from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
 
-import ButtonHover from '../../src/button/ButtonHover';
+import ButtonHoverBorder from '../../src/button/ButtonHoverBorder';
 import ButtonIconFA from '../../src/button/ButtonIconFA';
 import CodePreview from '../../src/CodePreview';
 import Divider from '../../src/Divider';
@@ -133,12 +133,12 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
       <WarpButtonComp>
         <SectionButton>
           <WarpButton>
-            <ButtonHover oneLine className="remove-border-color-button">
+            <ButtonHoverBorder oneLine className="remove-border-color-button">
               Hover One Line
-            </ButtonHover>
+            </ButtonHoverBorder>
           </WarpButton>
           <WarpButton>
-            <ButtonHover
+            <ButtonHoverBorder
               twoLine
               backgroundColor="#41436a"
               lineColor="#f54768"
@@ -146,10 +146,10 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
               className="remove-border-color-button"
             >
               Hover Two Line
-            </ButtonHover>
+            </ButtonHoverBorder>
           </WarpButton>
           <WarpButton>
-            <ButtonHover
+            <ButtonHoverBorder
               fourLine
               backgroundColor="#ffe3b3"
               lineColor="#dd4470"
@@ -158,7 +158,7 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
               onClick={() => alert('onClick Four Line')}
             >
               Hover Four Line
-            </ButtonHover>
+            </ButtonHoverBorder>
           </WarpButton>
         </SectionButton>
         <SectionCode>
@@ -220,7 +220,10 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
             <Link href="/button/button-hover-border">
               <LinkExample href="/button/button-hover-border">example preview</LinkExample>
             </Link>
-            <LinkExample href={`${SOURCE_CODE_LINK}/src/button/ButtonHover.tsx`} target="_blank">
+            <LinkExample
+              href={`${SOURCE_CODE_LINK}/src/button/ButtonHoverBorder.tsx`}
+              target="_blank"
+            >
               source code
             </LinkExample>
           </SectionLinkExample>

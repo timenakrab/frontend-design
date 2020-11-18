@@ -82,7 +82,6 @@ const ChildOne = styled.span<ButtonProps>`
     transition-delay: 0.2s;
   }
 `;
-
 const TwoLineButton = styled.button<ButtonProps>`
   display: inline-block;
   position: relative;
@@ -150,7 +149,6 @@ const ChildTwo = styled.span<ButtonProps>`
     transition-delay: 0.2s;
   }
 `;
-
 const FourLineButton = styled.button<ButtonProps>`
   display: inline-block;
   position: relative;
@@ -219,7 +217,7 @@ const ChildFour = styled.span<ButtonProps>`
   }
 `;
 
-interface ButtonHoverProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonHoverBorderProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: string | ChildrenProps;
   textColor?: string;
   backgroundColor?: string;
@@ -229,7 +227,7 @@ interface ButtonHoverProps extends React.ButtonHTMLAttributes<HTMLButtonElement>
   fourLine?: boolean;
 }
 
-const ButtonHover: React.FC<ButtonHoverProps> = (props: ButtonHoverProps) => {
+const ButtonHoverBorder: React.FC<ButtonHoverBorderProps> = (props: ButtonHoverBorderProps) => {
   const { oneLine, twoLine, fourLine, children, textColor, backgroundColor, lineColor } = props;
   if (oneLine) {
     return (
@@ -283,7 +281,7 @@ const ButtonHover: React.FC<ButtonHoverProps> = (props: ButtonHoverProps) => {
   );
 };
 
-ButtonHover.defaultProps = {
+ButtonHoverBorder.defaultProps = {
   textColor: '#000000',
   backgroundColor: '#d0d0d0',
   lineColor: '#000000',
@@ -292,4 +290,4 @@ ButtonHover.defaultProps = {
   fourLine: false,
 };
 
-export default ButtonHover;
+export default ButtonHoverBorder;
