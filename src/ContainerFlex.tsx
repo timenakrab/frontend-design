@@ -35,7 +35,7 @@ const ContainerFlex = ({ flexDirection, backgroundColor, children }: ContainerFl
 
 ContainerFlex.defaultProps = {
   flexDirection: 'row',
-  backgroundColor: '#ffffff',
+  backgroundColor: 'transparent',
 };
 
 export default ContainerFlex;
