@@ -58,7 +58,7 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
       <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         button components
       </Text>
-      <Divider />
+      <Divider line="solid" />
       <Text h2 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         Anchor (hover effects)
       </Text>

@@ -62,7 +62,7 @@ const CardPage = ({ router }: CardPageProps) => {
       <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         card components
       </Text>
-      <Divider />
+      <Divider line="solid" />
       <Text h2 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         card product (hover)
       </Text>
@@ -129,7 +129,7 @@ const CardPage = ({ router }: CardPageProps) => {
           </SectionLinkExample>
         </SectionCode>
       </WarpCardProduct>
-      <Divider />
+      <Divider line="wave" />
       <Text h2 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         card (border hover effects)
       </Text>

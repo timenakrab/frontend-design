@@ -57,7 +57,7 @@ const TogglePage = ({ router }: TogglePageProps) => {
       <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         toggle components
       </Text>
-      <Divider />
+      <Divider line="solid" />
       <Text h2 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         toggle (design with mobile)
       </Text>
