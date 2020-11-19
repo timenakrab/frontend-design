@@ -15,24 +15,24 @@ export const SwitchMobileRequire: BodyTableRequire[] = [
     name: 'size',
     type: 'number',
     require: false,
-    remark: '40',
+    remark: { type: 'string', value: '40' },
   },
   {
     name: 'uncheckedColor',
     type: 'string',
     require: false,
-    remark: '#FF0000',
+    remark: { type: 'color', value: '#FF0000' },
   },
   {
     name: 'checkedColor',
     type: 'string',
     require: false,
-    remark: '#00FF00',
+    remark: { type: 'color', value: '#00FF00' },
   },
   {
     name: 'callbackFunc',
     type: 'function',
     require: false,
-    remark: '() => { }',
+    remark: { type: 'string', value: '() => { }' },
   },
 ];

@@ -30,6 +30,6 @@ export const CardHoverEffectRequire: BodyTableRequire[] = [
     name: 'link',
     type: 'string',
     require: false,
-    remark: '/',
+    remark: { type: 'string', value: '/' },
   },
 ];

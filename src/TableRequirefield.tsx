@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import PreviewColor from './PreviewColor';
+
 const HeadTable = styled.div`
   display: flex;
   flex-direction: row;
@@ -63,11 +65,25 @@ const BodyRemark = styled.div`
   font-family: 'Kanit';
 `;
 
+const RemarkValue = styled.span`
+  font-family: 'Kanit';
+  font-size: 16px;
+  line-height: 24px;
+`;
+const RemarkLink = styled.a`
+  font-family: 'Kanit';
+  font-size: 16px;
+  line-height: 24px;
+`;
+
 export interface BodyTableRequire {
   name: string;
   type: string;
   require: boolean;
-  remark?: string;
+  remark?: {
+    type: 'string' | 'color' | 'url';
+    value: string;
+  };
 }
 interface TableRequireProps {
   body: BodyTableRequire[];
@@ -84,14 +100,29 @@ const TableRequirefield = ({ body }: TableRequireProps) => {
         <HeadRemark>Remark</HeadRemark>
       </HeadTable>
       <div>
-        {bodyData.map((data) => (
-          <BodyItem key={data.name}>
-            <BodyName>{data.name}</BodyName>
-            <BodyType>{data.type}</BodyType>
-            <BodyRequire>{data.require ? 'require' : 'not require'}</BodyRequire>
-            <BodyRemark>{data.remark}</BodyRemark>
-          </BodyItem>
-        ))}
+        {bodyData.map((data) => {
+          const { name, type, require, remark } = data;
+          let remarkComp = null;
+          if (remark?.type === 'string') {
+            remarkComp = <RemarkValue>{remark?.value}</RemarkValue>;
+          } else if (remark?.type === 'color') {
+            remarkComp = <PreviewColor color={remark?.value} />;
+          } else if (remark?.type === 'url') {
+            remarkComp = (
+              <RemarkLink href={remark?.value} target="_blank">
+                {remark?.value}
+              </RemarkLink>
+            );
+          }
+          return (
+            <BodyItem key={name}>
+              <BodyName>{name}</BodyName>
+              <BodyType>{type}</BodyType>
+              <BodyRequire>{require ? 'require' : 'not require'}</BodyRequire>
+              <BodyRemark>{remarkComp}</BodyRemark>
+            </BodyItem>
+          );
+        })}
       </div>
     </div>
   );

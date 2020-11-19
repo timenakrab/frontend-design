@@ -14,18 +14,18 @@ export const ButtonIconFARequire: BodyTableRequire[] = [
     name: 'icon',
     type: 'string',
     require: true,
-    remark: 'https://fontawesome.com',
+    remark: { type: 'url', value: 'https://fontawesome.com' },
   },
   {
     name: 'bgColor',
     type: 'string',
     require: false,
-    remark: '#FFFFFF',
+    remark: { type: 'color', value: '#FFFFFF' },
   },
   {
     name: 'link',
     type: 'string',
     require: false,
-    remark: '/#',
+    remark: { type: 'string', value: '/#' },
   },
 ];

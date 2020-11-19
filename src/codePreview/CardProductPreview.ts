@@ -26,18 +26,18 @@ export const CardProductRequire: BodyTableRequire[] = [
     name: 'satang',
     type: 'number',
     require: false,
-    remark: '0 (Zero)',
+    remark: { type: 'string', value: '0 (Zero) not show' },
   },
   {
     name: 'color',
     type: 'string',
     require: false,
-    remark: '#8A8A8A',
+    remark: { type: 'color', value: '#8A8A8A' },
   },
   {
     name: 'link',
     type: 'string',
     require: false,
-    remark: '/',
+    remark: { type: 'string', value: '/' },
   },
 ];
