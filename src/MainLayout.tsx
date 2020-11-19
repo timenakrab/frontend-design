@@ -42,6 +42,7 @@ const NavbarNav = styled.ul`
   align-items: center;
   @media (max-width: 600px) {
     flex-direction: row;
+    overflow-x: scroll;
   }
 `;
 const NavbarItem = styled.li`
