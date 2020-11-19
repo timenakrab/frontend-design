@@ -23,10 +23,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,400;0,700;1,500&display=swap"
             crossOrigin="anonymous"
           />
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-          />
           <link rel="stylesheet" href="/customs.css" />
         </Head>
         <body>
