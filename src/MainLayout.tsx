@@ -43,16 +43,25 @@ const NavbarNav = styled.ul`
   @media (max-width: 600px) {
     flex-direction: row;
     overflow-x: scroll;
+    overflow-y: hidden;
   }
 `;
 const NavbarItem = styled.li`
   width: 100%;
-  &:last-child {
-    margin-top: auto;
+  @media (max-width: 600px) {
+    &:nth-child(2) {
+      display: none;
+    }
+    &:last-child {
+      margin-top: 0px;
+    }
   }
   @media (min-width: 600px) {
     &:nth-child(2) {
       display: none;
+    }
+    &:last-child {
+      margin-top: auto;
     }
   }
 `;
