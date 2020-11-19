@@ -129,9 +129,10 @@ const IconLogo = styled.i`
 type MainLayoutProps = {
   pathname?: string;
   children: ChildrenProps;
+  customStyle?: React.CSSProperties;
 };
 
-const MainLayout = ({ pathname, children }: MainLayoutProps) => {
+const MainLayout = ({ pathname, children, customStyle }: MainLayoutProps) => {
   return (
     <>
       <Navbar>
@@ -184,13 +185,14 @@ const MainLayout = ({ pathname, children }: MainLayoutProps) => {
           </NavbarItem>
         </NavbarNav>
       </Navbar>
-      <Main>{children}</Main>
+      <Main style={{ ...customStyle }}>{children}</Main>
     </>
   );
 };
 
 MainLayout.defaultProps = {
   pathname: '',
+  customStyle: {},
 };
 
 export default MainLayout;
