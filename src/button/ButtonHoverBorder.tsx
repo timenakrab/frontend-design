@@ -232,7 +232,6 @@ const ButtonHoverBorder: React.FC<ButtonHoverBorderProps> = (props: ButtonHoverB
   if (oneLine) {
     return (
       <OneLineButton
-        /* eslint-disable-next-line react/jsx-props-no-spreading */
         {...props}
         backgroundColor={backgroundColor}
         lineColor={lineColor}
@@ -245,7 +244,6 @@ const ButtonHoverBorder: React.FC<ButtonHoverBorderProps> = (props: ButtonHoverB
   if (twoLine) {
     return (
       <TwoLineButton
-        /* eslint-disable-next-line react/jsx-props-no-spreading */
         {...props}
         backgroundColor={backgroundColor}
         lineColor={lineColor}
@@ -258,7 +256,6 @@ const ButtonHoverBorder: React.FC<ButtonHoverBorderProps> = (props: ButtonHoverB
   if (fourLine) {
     return (
       <FourLineButton
-        /* eslint-disable-next-line react/jsx-props-no-spreading */
         {...props}
         backgroundColor={backgroundColor}
         lineColor={lineColor}
@@ -270,7 +267,6 @@ const ButtonHoverBorder: React.FC<ButtonHoverBorderProps> = (props: ButtonHoverB
   }
   return (
     <OneLineButton
-      /* eslint-disable-next-line react/jsx-props-no-spreading */
       {...props}
       backgroundColor={backgroundColor}
       lineColor={lineColor}
