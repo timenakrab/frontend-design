@@ -9,6 +9,9 @@ const HeadTable = styled.div`
   margin: 4px 0px;
   background-color: #41436a;
   padding: 8px 16px;
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 const HeadName = styled.div`
   width: 40%;
@@ -16,6 +19,10 @@ const HeadName = styled.div`
   font-family: 'Kanit';
   font-weight: bold;
   color: #ff9678;
+  @media (max-width: 425px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 const HeadType = styled.div`
   width: 20%;
@@ -23,6 +30,10 @@ const HeadType = styled.div`
   font-family: 'Kanit';
   font-weight: bold;
   color: #ff9678;
+  @media (max-width: 425px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 const HeadRequire = styled.div`
   width: 20%;
@@ -30,6 +41,10 @@ const HeadRequire = styled.div`
   font-family: 'Kanit';
   font-weight: bold;
   color: #ff9678;
+  @media (max-width: 425px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 const HeadRemark = styled.div`
   width: 20%;
@@ -37,6 +52,10 @@ const HeadRemark = styled.div`
   font-family: 'Kanit';
   font-weight: bold;
   color: #ff9678;
+  @media (max-width: 425px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 const BodyItem = styled.div`
@@ -46,23 +65,47 @@ const BodyItem = styled.div`
   background-color: #ffffff;
   padding: 8px 16px;
   border-bottom: 1px solid #d2d2d2;
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 const BodyName = styled.div`
   width: 40%;
   font-family: 'Kanit';
   color: #f54768;
+  @media (max-width: 425px) {
+    width: 100%;
+    text-align: center;
+    padding: 4px 0px;
+  }
 `;
 const BodyType = styled.div`
   width: 20%;
   font-family: 'Kanit';
+  @media (max-width: 425px) {
+    width: 100%;
+    text-align: center;
+    padding: 4px 0px;
+  }
 `;
 const BodyRequire = styled.div`
   width: 20%;
   font-family: 'Kanit';
+  @media (max-width: 425px) {
+    width: 100%;
+    text-align: center;
+    padding: 4px 0px;
+  }
 `;
 const BodyRemark = styled.div`
   width: 20%;
   font-family: 'Kanit';
+  @media (max-width: 425px) {
+    width: 100%;
+    padding: 4px 0px;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const RemarkValue = styled.span`
@@ -110,7 +153,7 @@ const TableRequirefield = ({ body }: TableRequireProps) => {
           } else if (remark?.type === 'url') {
             remarkComp = (
               <RemarkLink href={remark?.value} target="_blank">
-                {remark?.value}
+                LINK
               </RemarkLink>
             );
           }
