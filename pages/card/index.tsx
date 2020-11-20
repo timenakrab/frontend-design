@@ -30,13 +30,6 @@ const SectionCardProduct = styled.div`
     width: 100%;
   }
 `;
-// const SectionCode = styled.div`
-//   flex-grow: 1;
-//   padding: 0px 8px;
-//   @media (max-width: 768px) {
-//     padding: 8px 0px;
-//   }
-// `;
 
 type CardPageProps = {
   router: NextRouter;
@@ -44,7 +37,7 @@ type CardPageProps = {
 
 const CardPage = ({ router }: CardPageProps) => {
   return (
-    <MainLayout pathname={router.pathname}>
+    <MainLayout pathname={router.pathname} customStyle={{ padding: '0px 16px' }}>
       <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         card components
       </Text>

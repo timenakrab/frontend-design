@@ -38,7 +38,7 @@ type ButtonPageProps = {
 
 const ButtonPage = ({ router }: ButtonPageProps) => {
   return (
-    <MainLayout pathname={router.pathname}>
+    <MainLayout pathname={router.pathname} customStyle={{ padding: '0px 16px' }}>
       <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         button components
       </Text>

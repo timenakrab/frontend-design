@@ -58,6 +58,37 @@ const LinkExample = styled.a`
   color: #ff9678;
   text-transform: uppercase;
   margin: 4px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #ff9678;
+  border-radius: 8px;
+  padding: 4px 8px;
+  &:hover {
+    background-color: #ff9678;
+    color: #ffffff;
+  }
+`;
+const LinkGithub = styled.a`
+  font-size: 18px;
+  line-height: 24px;
+  font-family: 'Kanit';
+  color: #41436a;
+  text-transform: uppercase;
+  margin: 4px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #41436a;
+  border-radius: 8px;
+  padding: 4px 8px;
+  &:hover {
+    background-color: #41436a;
+    color: #ffffff;
+  }
+`;
+const Icon = styled.i`
+  margin-right: 8px;
 `;
 const SOURCE_CODE_LINK = 'https://github.com/timenakrab/frontend-design/blob/master';
 
@@ -88,11 +119,15 @@ const WarpCompPreview = ({
           <TableRequirefield body={requireData} />
           <SectionLinkExample>
             <Link href={exampleLink}>
-              <LinkExample href={exampleLink}>example preview</LinkExample>
+              <LinkExample href={exampleLink}>
+                <Icon className="fas fa-table" />
+                live preview
+              </LinkExample>
             </Link>
-            <LinkExample href={SOURCE_CODE_LINK + sourceCodeLink} target="_blank">
+            <LinkGithub href={SOURCE_CODE_LINK + sourceCodeLink} target="_blank">
+              <Icon className="fas fa-code" />
               source code
-            </LinkExample>
+            </LinkGithub>
           </SectionLinkExample>
         </SectionCode>
       </WarpComp>

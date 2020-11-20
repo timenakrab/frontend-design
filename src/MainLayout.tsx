@@ -6,7 +6,6 @@ import { ChildrenProps } from './type/custom';
 
 const Main = styled.main`
   margin-left: 5rem;
-  padding: 1rem;
   min-height: 100vh;
   @media (max-width: 600px) {
     margin: 0px;
@@ -23,7 +22,7 @@ const Navbar = styled.nav`
     width: 100vw;
     height: 5rem;
   }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     top: 0px;
     width: 5rem;
     height: 100vh;
@@ -56,7 +55,7 @@ const NavbarItem = styled.li`
       margin-top: 0px;
     }
   }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     &:nth-child(2) {
       display: none;
     }
@@ -96,7 +95,7 @@ const LinkText = styled.span`
       transition: opacity 200ms;
     }
   }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     ${Navbar}:hover & {
       display: inline;
       transition: opacity 200ms;

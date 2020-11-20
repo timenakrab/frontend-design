@@ -19,7 +19,7 @@ type HomePageProps = {
 
 const HomePage = ({ router }: HomePageProps) => {
   return (
-    <MainLayout pathname={router.pathname} customStyle={{ padding: 0 }}>
+    <MainLayout pathname={router.pathname}>
       <Background />
     </MainLayout>
   );
