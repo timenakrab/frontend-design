@@ -61,7 +61,7 @@ const ButtonApplePage = () => {
             {
               icon: 'fas fa-wifi',
               label: 'Wi-Fi',
-              value: 'Apple Wi-Fi',
+              value: 'Home',
               active: true,
               isNext: false,
             },
@@ -75,7 +75,7 @@ const ButtonApplePage = () => {
             {
               icon: <Airdrop width={16} height={16} enable />,
               label: 'Airdrop',
-              value: 'Contact Only',
+              value: 'Contacts Only',
               active: true,
               isNext: true,
             },
