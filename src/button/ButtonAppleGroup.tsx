@@ -4,27 +4,23 @@ import styled from 'styled-components';
 const BtnAppleGroup = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: 14px;
+  border-radius: 8px;
   border: 0px;
-  background-color: rgba(236, 232, 232, 0.6);
+  padding: 5px 2px;
+  background-color: rgba(236, 232, 232, 0.5);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
 `;
 const BtnApple = styled.button<{ isNext: boolean }>`
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 40px;
-  width: 126px;
-  padding: 6px 8px;
+  width: 130px;
+  padding: 6px;
   border: 0px;
   background-color: transparent;
   cursor: pointer;
-  &:nth-child(1) {
-    border-radius: 14px 14px 0px 0px;
-  }
-  &:last-child {
-    border-radius: 0px 0px 14px 14px;
-  }
   ::after {
     display: ${(props) => (props.isNext ? 'block' : 'none')};
     font-family: 'Font Awesome 5 Free';
@@ -32,6 +28,8 @@ const BtnApple = styled.button<{ isNext: boolean }>`
     font-size: 12px;
     font-weight: 900;
     color: ${(props) => (props.isNext ? 'rgba(0, 0, 0, 0.5)' : 'rgba(0, 0, 0, 0)')};
+    position: absolute;
+    right: 6px;
   }
 `;
 const SectionIcon = styled.div`
@@ -60,7 +58,7 @@ const WarpLabel = styled.div`
   justify-content: center;
   width: calc(100% - 32px);
   height: 36px;
-  padding-left: 4px;
+  padding-left: 8px;
 `;
 const Label = styled.p`
   font-size: 12px;

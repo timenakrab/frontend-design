@@ -17,8 +17,8 @@ const Root = styled.div`
 const Menu = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: 14px;
-  background-color: rgba(236, 232, 232, 0.6);
+  border-radius: 12px;
+  background-color: rgba(236, 232, 232, 0.4);
   padding: 5px 0px;
   margin: 8px;
 `;
@@ -29,8 +29,8 @@ const WarpButton = styled.div`
 const GroupMenu = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: 14px;
-  background-color: rgba(236, 232, 232, 0.6);
+  border-radius: 12px;
+  background-color: rgba(236, 232, 232, 0.4);
   padding: 10px 8px;
   margin: 8px;
 `;
@@ -49,7 +49,7 @@ const ButtonApplePage = () => {
           <ButtonApple
             icon={<Airdrop width={16} height={16} enable />}
             label="Airdrop"
-            value="Contact Only"
+            value="Contacts Only"
             active
             isNext
           />

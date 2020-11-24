@@ -2,15 +2,16 @@ import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 
 const BtnApple = styled.button<{ isNext: boolean }>`
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 40px;
-  width: 126px;
+  width: 130px;
   padding: 2px 8px;
-  border-radius: 14px;
+  border-radius: 8px;
   border: 0px;
-  background-color: rgba(236, 232, 232, 0.6);
+  background-color: rgba(236, 232, 232, 0.4);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
   cursor: pointer;
   &::after {
@@ -20,6 +21,8 @@ const BtnApple = styled.button<{ isNext: boolean }>`
     font-size: 12px;
     font-weight: 900;
     color: ${(props) => (props.isNext ? 'rgba(0, 0, 0, 0.5)' : 'rgba(0, 0, 0, 0)')};
+    position: absolute;
+    right: 6px;
   }
 `;
 const SectionIcon = styled.div`
