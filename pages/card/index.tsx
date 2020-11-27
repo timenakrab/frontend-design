@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import CardEffect from '../../src/card/CardEffect';
 import CardProduct from '../../src/card/CardProduct';
+import CardSquareInfo from '../../src/card/CardSquareInfo';
 import {
   CardHoverEffectLink,
   CardHoverEffectPreview,
@@ -16,6 +17,12 @@ import {
   CardProductRequire,
   CardProductSource,
 } from '../../src/codePreview/CardProductPreview';
+import {
+  CardSquareInfoLink,
+  CardSquareInfoPreview,
+  CardSquareInfoRequire,
+  CardSquareInfoSource,
+} from '../../src/codePreview/CardSquareInfoPreview';
 import Divider from '../../src/Divider';
 import MainLayout from '../../src/MainLayout';
 import Text from '../../src/Text';
@@ -76,6 +83,28 @@ const CardPage = ({ router }: CardPageProps) => {
             title="Post Title"
             desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
             link="/"
+          />
+        </SectionCardProduct>
+      </WarpCompPreview>
+      <WarpCompPreview
+        title="square card (hover effects)"
+        exampleLink={CardSquareInfoLink}
+        sourceCodeLink={CardSquareInfoSource}
+        flexDirection="row"
+        codeLanguage="tsx"
+        codePreview={CardSquareInfoPreview}
+        requireData={CardSquareInfoRequire}
+      >
+        <SectionCardProduct>
+          <CardSquareInfo
+            icon="fab fa-apple"
+            cardSize={300}
+            cardColor="#2e3033"
+            iconColor="#f3f3f3"
+            cardInfoColor="#5eb0e5"
+            iconInfoColor="#f3f3f3"
+            textColor="#f3f3f3"
+            info="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           />
         </SectionCardProduct>
       </WarpCompPreview>
