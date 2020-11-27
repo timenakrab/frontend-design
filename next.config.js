@@ -7,8 +7,14 @@ module.exports = withSass({
   },
   crossOrigin: 'anonymous',
   webpack: (config, { dev }) => {
+    const newConfig = config;
+    newConfig.resolve.alias = {
+      ...newConfig.resolve.alias,
+      react: 'preact/compat',
+      'react-dom': 'preact/compat',
+    };
     if (dev) {
-      config.module.rules.push({
+      newConfig.module.rules.push({
         test: /\.js|jsx|ts|tsx$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
@@ -17,7 +23,7 @@ module.exports = withSass({
         },
       });
     }
-    return config;
+    return newConfig;
   },
   env: {},
   serverRuntimeConfig: {},
