@@ -23,10 +23,8 @@ const CardSquareInfoPage = () => {
         <CardSquareInfo
           icon="fab fa-apple"
           cardSize={260}
-          /* card */
           cardColor="#2e3033"
           iconColor="#f3f3f3"
-          /* card info */
           cardInfoColor="#5eb0e5"
           iconInfoColor="#f3f3f3"
           textColor="#f3f3f3"
@@ -37,10 +35,8 @@ const CardSquareInfoPage = () => {
         <CardSquareInfo
           icon="fab fa-android"
           cardSize={240}
-          /* card */
           cardColor="#3ddc84"
           iconColor="#ffffff"
-          /* card info */
           cardInfoColor="#ffffff"
           iconInfoColor="#3ddc84"
           textColor="#689f38"

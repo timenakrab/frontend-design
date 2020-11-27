@@ -4,10 +4,8 @@ import styled from 'styled-components';
 interface ICardSquare {
   icon: string; // font-awesome className;
   cardSize?: number;
-  /* card */
   cardColor?: string;
   iconColor?: string;
-  /* card info */
   cardInfoColor?: string;
   iconInfoColor?: string;
   info: string;
@@ -70,6 +68,7 @@ const CardInfo = styled.div<ICardInfoStyle>`
   transition: 0.3s;
   ${CardSquare}:hover & {
     top: 0px;
+    transition-delay: 0.1s;
   }
 `;
 const IconInfo = styled.i<IIconInfoStyle>`
