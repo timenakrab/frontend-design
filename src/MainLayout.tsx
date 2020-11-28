@@ -107,6 +107,10 @@ const Icon = styled.i`
   margin: 0 1.5rem;
   font-size: 28px;
   color: #f54768;
+  @media (max-width: 600px) {
+    min-width: 1rem;
+    margin: 0;
+  }
 `;
 const Logo = styled.li`
   font-weight: bold;
@@ -182,6 +186,14 @@ const MainLayout = ({ pathname, children, customStyle }: MainLayoutProps) => {
               <NavberLink href="/toggle" active={pathname === '/toggle'}>
                 <Icon className="fas fa-toggle-on" />
                 <LinkText>toggle</LinkText>
+              </NavberLink>
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link href="/ui-kit">
+              <NavberLink href="/ui-kit" active={pathname === '/ui-kit'}>
+                <Icon className="fab fa-uikit" />
+                <LinkText>ui kit</LinkText>
               </NavberLink>
             </Link>
           </NavbarItem>
