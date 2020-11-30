@@ -8,7 +8,17 @@ interface IAlert {
   type: 'error' | 'warning' | 'success' | 'info';
 }
 interface IBody {
-  bgColor: string;
+  bgColor: {
+    primary: string;
+    secondary: string;
+  };
+}
+
+interface ICloseBtn {
+  bgColor: {
+    primary: string;
+    secondary: string;
+  };
 }
 
 const AlertBody = styled.div<IBody>`
@@ -16,8 +26,9 @@ const AlertBody = styled.div<IBody>`
   flex-direction: row;
   width: 100%;
   border-radius: ${unit * 2}px;
-  background-color: ${(props) => props.bgColor};
+  background-color: ${(props) => props.bgColor.secondary};
   margin-bottom: ${unit}px;
+  overflow: hidden;
 `;
 const AlertText = styled.div`
   position: relative;
@@ -35,12 +46,11 @@ const AlertText = styled.div`
   font-size: 18px;
   line-height: 40px;
 `;
-const Close = styled.button`
+const Close = styled.button<ICloseBtn>`
   width: ${unit * 5}px;
   height: ${unit * 5}px;
   padding: 0px;
-  border: 0px;
-  background-color: ${colors.background.transparent};
+  background-color: ${(props) => props.bgColor.secondary};
   cursor: pointer;
   outline: 0px;
   box-shadow: none;
@@ -49,14 +59,17 @@ const Close = styled.button`
     font-size: 20px;
     color: ${colors.text.white};
   }
+  &:hover {
+    background-color: ${(props) => props.bgColor.primary};
+  }
 `;
 
-const Alert = (props: IAlert) => {
+const Alert: React.FC<IAlert> = (props: IAlert) => {
   const { text, type } = props;
   return (
-    <AlertBody bgColor={colors[type].primary}>
+    <AlertBody bgColor={colors[type]}>
       <AlertText>{text}</AlertText>
-      <Close type="button">
+      <Close type="button" bgColor={colors[type]}>
         <i className="fas fa-times" />
       </Close>
     </AlertBody>
