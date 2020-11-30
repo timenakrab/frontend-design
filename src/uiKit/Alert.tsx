@@ -1,24 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { colors, unit } from './styleguilde';
+import { ColorProps, colorStyles, ColorTypes, textStyles, unit } from './styleguilde';
 
-interface IAlert {
+interface IAlert extends React.HTMLAttributes<HTMLDivElement> {
   text: string;
-  type: 'error' | 'warning' | 'success' | 'info';
+  alertType: ColorTypes;
 }
 interface IBody {
-  bgColor: {
-    primary: string;
-    secondary: string;
-  };
+  bgColor: ColorProps;
 }
 
 interface ICloseBtn {
-  bgColor: {
-    primary: string;
-    secondary: string;
-  };
+  bgColor: ColorProps;
 }
 
 const AlertBody = styled.div<IBody>`
@@ -41,7 +35,7 @@ const AlertText = styled.div`
   min-height: calc(40px);
   max-height: calc(40px);
   height: auto;
-  color: ${colors.text.white};
+  color: ${textStyles.white};
   font-family: 'Kanit', sans-serif;
   font-size: 18px;
   line-height: 40px;
@@ -57,7 +51,7 @@ const Close = styled.button<ICloseBtn>`
   border: 0px solid transparent;
   & > i {
     font-size: 20px;
-    color: ${colors.text.white};
+    color: ${textStyles.white};
   }
   &:hover {
     background-color: ${(props) => props.bgColor.primary};
@@ -65,11 +59,11 @@ const Close = styled.button<ICloseBtn>`
 `;
 
 const Alert: React.FC<IAlert> = (props: IAlert) => {
-  const { text, type } = props;
+  const { text, alertType } = props;
   return (
-    <AlertBody bgColor={colors[type]}>
+    <AlertBody {...props} bgColor={colorStyles[alertType]}>
       <AlertText>{text}</AlertText>
-      <Close type="button" bgColor={colors[type]}>
+      <Close type="button" bgColor={colorStyles[alertType]}>
         <i className="fas fa-times" />
       </Close>
     </AlertBody>

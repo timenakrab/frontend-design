@@ -1,18 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { colors, unit } from './styleguilde';
+import { bgStyles, buttonStyles, ColorProps, ColorTypes, textStyles, unit } from './styleguilde';
 
 interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: string;
-  typeButton?: 'error' | 'warning' | 'success' | 'info' | 'default';
+  buttonType?: ColorTypes;
 }
 interface IBtn {
-  bgColor: {
-    primary: string;
-    secondary: string;
-    disable: string;
-  };
+  bgColor: ColorProps;
   disabled?: boolean;
 }
 
@@ -30,7 +26,7 @@ const Design = styled.button<IBtn>`
   font-size: 16px;
   line-height: 24px;
   font-family: 'Kanit', sans-serif;
-  color: ${colors.text.white};
+  color: ${textStyles.white};
   &:hover {
     background-color: ${(props) => props.bgColor.primary};
   }
@@ -40,34 +36,34 @@ const Design = styled.button<IBtn>`
   }
 `;
 const Default = styled.button`
-  background-color: ${colors.default.secondary};
+  background-color: ${buttonStyles.default.secondary};
   min-height: ${unit * 5}px;
   max-height: ${unit * 5}px;
   padding: 8px;
   cursor: pointer;
   outline: 0px;
   box-shadow: none;
-  border: 1px solid ${colors.text.superlight};
+  border: 1px solid ${textStyles.superlight};
   border-radius: ${unit}px;
   min-width: ${unit * 20}px;
   font-size: 16px;
   line-height: 24px;
   font-family: 'Kanit', sans-serif;
-  color: ${colors.text.dark};
+  color: ${textStyles.dark};
   &:hover {
-    background-color: ${colors.default.primary};
+    background-color: ${buttonStyles.default.primary};
   }
   &:disabled {
     cursor: no-drop;
-    background-color: ${colors.default.disable};
-    border: 1px solid ${colors.background.transparent};
-    color: ${colors.text.light};
+    background-color: ${buttonStyles.default.disable};
+    border: 1px solid ${bgStyles.transparent};
+    color: ${textStyles.light};
   }
 `;
 
 const Button: React.FC<IButton> = (props: IButton) => {
-  const { children, typeButton, disabled } = props;
-  if (typeButton === 'default') {
+  const { children, buttonType, disabled } = props;
+  if (buttonType === 'default') {
     return (
       <Default {...props} disabled={disabled}>
         {children}
@@ -75,14 +71,14 @@ const Button: React.FC<IButton> = (props: IButton) => {
     );
   }
   return (
-    <Design {...props} bgColor={colors[typeButton]} disabled={disabled}>
+    <Design {...props} bgColor={buttonStyles[buttonType]} disabled={disabled}>
       {children}
     </Design>
   );
 };
 
 Button.defaultProps = {
-  typeButton: 'default',
+  buttonType: 'default',
 };
 
 export default Button;

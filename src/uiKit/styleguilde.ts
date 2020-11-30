@@ -1,5 +1,12 @@
+export interface ColorProps {
+  primary: string;
+  secondary: string;
+  disable: string;
+}
+export type ColorTypes = 'error' | 'warning' | 'success' | 'info' | 'default';
+
 export const unit = 8;
-export const colors = {
+export const colorStyles = {
   default: {
     primary: '#fbfcfe',
     secondary: '#fafbfe',
@@ -25,17 +32,18 @@ export const colors = {
     secondary: '#2a5fe4',
     disable: '#396ef1',
   },
-  background: {
-    dark: '#f8f9fc',
-    light: '#f4f5f8',
-    transparent: 'transparent',
-  },
-  text: {
-    superdark: '#19243b',
-    dark: '#393f4d',
-    normal: '#596278',
-    light: '#8a92a5',
-    superlight: '#dbe0eb',
-    white: '#fffefd',
-  },
+};
+export const buttonStyles = colorStyles;
+export const bgStyles = {
+  dark: '#f8f9fc',
+  light: '#f4f5f8',
+  transparent: 'transparent',
+};
+export const textStyles = {
+  superdark: '#19243b',
+  dark: '#393f4d',
+  normal: '#596278',
+  light: '#8a92a5',
+  superlight: '#dbe0eb',
+  white: '#fffefd',
 };

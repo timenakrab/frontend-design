@@ -30,19 +30,19 @@ const UIKitPage = ({ router }: UIKitProps) => {
           </Text>
           <Alert
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-            type="error"
+            alertType="error"
           />
           <Alert
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-            type="warning"
+            alertType="warning"
           />
           <Alert
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-            type="success"
+            alertType="success"
           />
           <Alert
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-            type="info"
+            alertType="info"
           />
         </WrapComp>
         <WrapComp>
@@ -50,16 +50,16 @@ const UIKitPage = ({ router }: UIKitProps) => {
             Buttons
           </Text>
           <div>
-            <Button typeButton="error" className="mr-1 mb-1">
+            <Button buttonType="error" className="mr-1 mb-1">
               Error
             </Button>
-            <Button typeButton="warning" className="mr-1 mb-1">
+            <Button buttonType="warning" className="mr-1 mb-1">
               Warning
             </Button>
-            <Button typeButton="success" className="mr-1 mb-1">
+            <Button buttonType="success" className="mr-1 mb-1">
               Success
             </Button>
-            <Button typeButton="info" className="mr-1 mb-1">
+            <Button buttonType="info" className="mr-1 mb-1">
               Info
             </Button>
             <Button className="mr-1 mb-1">Default</Button>
@@ -68,16 +68,16 @@ const UIKitPage = ({ router }: UIKitProps) => {
             Buttons (disabled)
           </Text>
           <div>
-            <Button typeButton="error" className="mr-1 mb-1" disabled>
+            <Button buttonType="error" className="mr-1 mb-1" disabled>
               Error disabled
             </Button>
-            <Button typeButton="warning" className="mr-1 mb-1" disabled>
+            <Button buttonType="warning" className="mr-1 mb-1" disabled>
               Warning disabled
             </Button>
-            <Button typeButton="success" className="mr-1 mb-1" disabled>
+            <Button buttonType="success" className="mr-1 mb-1" disabled>
               Success disabled
             </Button>
-            <Button typeButton="info" className="mr-1 mb-1" disabled>
+            <Button buttonType="info" className="mr-1 mb-1" disabled>
               Info disabled
             </Button>
             <Button className="mr-1 mb-1" disabled>
