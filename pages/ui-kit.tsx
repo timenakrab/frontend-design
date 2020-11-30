@@ -62,6 +62,7 @@ const UIKitPage = ({ router }: UIKitProps) => {
             <Button typeButton="info" className="mr-1 mb-1">
               Info
             </Button>
+            <Button className="mr-1 mb-1">Default</Button>
           </div>
           <Text p customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
             Buttons (disabled)
@@ -78,6 +79,9 @@ const UIKitPage = ({ router }: UIKitProps) => {
             </Button>
             <Button typeButton="info" className="mr-1 mb-1" disabled>
               Info disabled
+            </Button>
+            <Button className="mr-1 mb-1" disabled>
+              Default disabled
             </Button>
           </div>
         </WrapComp>
