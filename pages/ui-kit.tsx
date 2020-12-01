@@ -6,14 +6,23 @@ import MainLayout from '../src/MainLayout';
 import Text from '../src/Text';
 import Alert from '../src/uiKit/Alert';
 import Button from '../src/uiKit/Button';
+import QuickAction from '../src/uiKit/QuickAction';
 
 const Background = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f9f9f9;
+  @media (max-width: 600px) {
+    margin-bottom: 5rem;
+  }
 `;
 const WrapComp = styled.div`
   margin: 0px 16px 24px 16px;
+`;
+const FlexRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 type UIKitProps = {
@@ -49,7 +58,7 @@ const UIKitPage = ({ router }: UIKitProps) => {
           <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
             Buttons
           </Text>
-          <div>
+          <FlexRow>
             <Button buttonType="error" className="mr-1 mb-1">
               Error
             </Button>
@@ -63,7 +72,7 @@ const UIKitPage = ({ router }: UIKitProps) => {
               Info
             </Button>
             <Button className="mr-1 mb-1">Default</Button>
-          </div>
+          </FlexRow>
           <Text p customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
             Buttons (disabled)
           </Text>
@@ -84,6 +93,48 @@ const UIKitPage = ({ router }: UIKitProps) => {
               Default disabled
             </Button>
           </div>
+        </WrapComp>
+        <WrapComp>
+          <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
+            Quick Actions
+          </Text>
+          <FlexRow>
+            <QuickAction faClassName="fas fa-share-alt" className="mr-1 mb-1" buttonType="error" />
+            <QuickAction faClassName="fas fa-plus" className="mr-1 mb-1" buttonType="warning" />
+            <QuickAction faClassName="fas fa-check" className="mr-1 mb-1" buttonType="success" />
+            <QuickAction faClassName="fas fa-info" className="mr-1 mb-1" buttonType="info" />
+            <QuickAction faClassName="fas fa-copy" className="mr-1 mb-1" />
+          </FlexRow>
+          <Text p customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+            Quick Actions (disabled)
+          </Text>
+          <FlexRow>
+            <QuickAction
+              faClassName="fas fa-share-alt"
+              className="mr-1 mb-1"
+              buttonType="error"
+              disabled
+            />
+            <QuickAction
+              faClassName="fas fa-plus"
+              className="mr-1 mb-1"
+              buttonType="warning"
+              disabled
+            />
+            <QuickAction
+              faClassName="fas fa-check"
+              className="mr-1 mb-1"
+              buttonType="success"
+              disabled
+            />
+            <QuickAction
+              faClassName="fas fa-info"
+              className="mr-1 mb-1"
+              buttonType="info"
+              disabled
+            />
+            <QuickAction faClassName="fas fa-copy" className="mr-1 mb-1" disabled />
+          </FlexRow>
         </WrapComp>
       </Background>
     </MainLayout>
