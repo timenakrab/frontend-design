@@ -1,7 +1,7 @@
 const process = require('process');
 
 const baseUrlDev = 'http://127.0.0.1:5050';
-const baseUrlProd = 'http://time-pai-ruey.netlify.app';
+const baseUrlProd = 'https://time-pai-ruey.netlify.app';
 
 const websiteUrl = process.env.NODE_ENV === 'production' ? baseUrlProd : baseUrlDev;
 const contentLang = 'th';
