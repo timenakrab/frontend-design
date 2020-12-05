@@ -31,7 +31,15 @@ type UIKitProps = {
 
 const UIKitPage = ({ router }: UIKitProps) => {
   return (
-    <MainLayout pathname={router.pathname}>
+    <MainLayout
+      pathname={router.pathname}
+      seoData={{
+        title: 'UI Kit',
+        desc: 'design ui kit for developer',
+        url: '/ui-kit',
+        keywords: 'time-pai-ruey,design,ui-kit',
+      }}
+    >
       <Background>
         <WrapComp>
           <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>

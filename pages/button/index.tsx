@@ -38,7 +38,16 @@ type ButtonPageProps = {
 
 const ButtonPage = ({ router }: ButtonPageProps) => {
   return (
-    <MainLayout pathname={router.pathname} customStyle={{ padding: '0px 16px' }}>
+    <MainLayout
+      pathname={router.pathname}
+      customStyle={{ padding: '0px 16px' }}
+      seoData={{
+        title: 'Button Components',
+        desc: 'design buttons',
+        url: '/button',
+        keywords: 'time-pai-ruey,design,buttons,button components',
+      }}
+    >
       <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         button components
       </Text>

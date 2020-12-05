@@ -1,4 +1,5 @@
 const withSass = require('@zeit/next-sass');
+const { websiteUrl } = require('./src/constant/configWebsite');
 
 module.exports = withSass({
   compress: true,
@@ -27,6 +28,10 @@ module.exports = withSass({
     return newConfig;
   },
   env: {},
-  serverRuntimeConfig: {},
-  publicRuntimeConfig: {},
+  serverRuntimeConfig: {
+    BASE_URL: websiteUrl,
+  },
+  publicRuntimeConfig: {
+    BASE_URL: websiteUrl,
+  },
 });

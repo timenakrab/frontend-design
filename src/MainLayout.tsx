@@ -2,6 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
+import { seoDesc, seoKeywords, seoPage, seoTitle } from './constant/configWebsite';
+import HeaderPage from './HeaderPage';
 import { ChildrenProps } from './type/custom';
 
 const Main = styled.main`
@@ -142,9 +144,16 @@ type MainLayoutProps = {
   pathname?: string;
   children: ChildrenProps;
   customStyle?: React.CSSProperties;
+  seoData?: {
+    title: string;
+    desc: string;
+    url: string;
+    keywords: string;
+  };
 };
 
-const MainLayout = ({ pathname, children, customStyle }: MainLayoutProps) => {
+const MainLayout = ({ pathname, children, customStyle, seoData }: MainLayoutProps) => {
+  const { title, desc, url, keywords } = seoData;
   return (
     <>
       <Navbar>
@@ -205,6 +214,7 @@ const MainLayout = ({ pathname, children, customStyle }: MainLayoutProps) => {
           </NavbarItem>
         </NavbarNav>
       </Navbar>
+      <HeaderPage title={title} desc={desc} url={url} keywords={keywords} />
       <Main style={{ ...customStyle }}>{children}</Main>
     </>
   );
@@ -213,6 +223,12 @@ const MainLayout = ({ pathname, children, customStyle }: MainLayoutProps) => {
 MainLayout.defaultProps = {
   pathname: '',
   customStyle: {},
+  seoData: {
+    title: seoTitle,
+    desc: seoDesc,
+    url: seoPage,
+    keywords: seoKeywords,
+  },
 };
 
 export default MainLayout;

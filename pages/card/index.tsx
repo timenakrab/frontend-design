@@ -44,7 +44,16 @@ type CardPageProps = {
 
 const CardPage = ({ router }: CardPageProps) => {
   return (
-    <MainLayout pathname={router.pathname} customStyle={{ padding: '0px 16px' }}>
+    <MainLayout
+      pathname={router.pathname}
+      customStyle={{ padding: '0px 16px' }}
+      seoData={{
+        title: 'Card Components',
+        desc: 'design cards',
+        url: '/card',
+        keywords: 'time-pai-ruey,design,card,card components',
+      }}
+    >
       <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         card components
       </Text>

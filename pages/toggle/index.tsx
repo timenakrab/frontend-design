@@ -30,7 +30,16 @@ type TogglePageProps = {
 
 const TogglePage = ({ router }: TogglePageProps) => {
   return (
-    <MainLayout pathname={router.pathname} customStyle={{ padding: '0px 16px' }}>
+    <MainLayout
+      pathname={router.pathname}
+      customStyle={{ padding: '0px 16px' }}
+      seoData={{
+        title: 'Toggle Components',
+        desc: 'design toggles',
+        url: '/toggle',
+        keywords: 'time-pai-ruey,design,toggles,toggle components',
+      }}
+    >
       <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         toggle components
       </Text>
