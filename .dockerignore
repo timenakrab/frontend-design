@@ -1,0 +1,10 @@
+# unuse file
+!.eslintrc.js
+!.eslintignore
+!.prettierrc
+.*
+Dockerfile
+
+# unuse folder
+coverage
+node_modules
