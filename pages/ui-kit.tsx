@@ -6,6 +6,7 @@ import MainLayout from '../src/MainLayout';
 import Text from '../src/Text';
 import Alert from '../src/uiKit/Alert';
 import Button from '../src/uiKit/Button';
+import ProgressBar from '../src/uiKit/ProgressBar';
 import QuickAction from '../src/uiKit/QuickAction';
 
 const Background = styled.div`
@@ -143,6 +144,24 @@ const UIKitPage = ({ router }: UIKitProps) => {
             />
             <QuickAction faClassName="fas fa-copy" className="mr-1 mb-1" disabled />
           </FlexRow>
+        </WrapComp>
+        <WrapComp>
+          <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
+            Progress bar
+          </Text>
+          <ProgressBar value={10} />
+          <ProgressBar value={25} progressType="error" />
+          <ProgressBar value={50} progressType="warning" />
+          <ProgressBar value={75} progressType="success" />
+          <ProgressBar value={100} progressType="info" />
+          <Text p customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+            Progress bar (Display value)
+          </Text>
+          <ProgressBar value={10} isDisplay />
+          <ProgressBar value={25} progressType="error" isDisplay />
+          <ProgressBar value={50} progressType="warning" isDisplay />
+          <ProgressBar value={75} progressType="success" isDisplay />
+          <ProgressBar value={100} progressType="info" isDisplay />
         </WrapComp>
       </Background>
     </MainLayout>

@@ -34,10 +34,12 @@ export const colorStyles = {
   },
 };
 export const buttonStyles = colorStyles;
+export const progressStyles = colorStyles;
 export const bgStyles = {
   dark: '#f8f9fc',
   light: '#f4f5f8',
   transparent: 'transparent',
+  white: '#ffffff',
 };
 export const textStyles = {
   superdark: '#19243b',
