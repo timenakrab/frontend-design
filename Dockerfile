@@ -1,10 +1,16 @@
 FROM node:13.3.0-alpine
+LABEL maintainer="Watchara Hongkim"
 
-WORKDIR /app
+ARG WORKDIR=/app
+# ARG PORT=5050
+
+WORKDIR ${WORKDIR}
 
 COPY . .
 
 RUN npm install
+
+# EXPOSE ${PORT}
 
 CMD ["npm", "run", "production"]
 

@@ -22,3 +22,30 @@ Publish directory
 ```
 out
 ```
+
+## Docker
+
+# build image
+
+```bash
+docker build -t frontend-design .
+```
+
+# create container
+
+```bash
+docker run -p 8888:5050 --name frontendDesign frontend-design
+```
+
+# stop & delete container
+
+```bash
+docker stop frontendDesign
+docker rm frontendDesign
+```
+
+# delete image
+
+```bash
+docker rmi frontend-design
+```
