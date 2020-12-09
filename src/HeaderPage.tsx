@@ -21,11 +21,15 @@ const HeaderPage: React.FC<IHeaderPage> = ({ title, desc, url, keywords }: IHead
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <title>{title} | Time-Pai-Ruey</title>
-      <link rel="icon" href={websiteLogo} />
+      <link rel="icon" href={publicRuntimeConfig.BASE_URL + websiteLogo} />
       <link rel="manifest" href={`${publicRuntimeConfig.BASE_URL}/manifest.json`} />
       <meta name="description" content={desc} />
       <meta name="keywords" content={keywords || title} />
-      <link rel="apple-touch-icon" sizes="180x180" href={websiteLogo} />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href={publicRuntimeConfig.BASE_URL + websiteLogo}
+      />
 
       <meta property="fb:app_id" content="1876421945732975" />
       <meta property="og:locale" content="th_TH" />
@@ -35,7 +39,7 @@ const HeaderPage: React.FC<IHeaderPage> = ({ title, desc, url, keywords }: IHead
       <meta property="og:description" content={desc} />
       <meta property="og:url" content={publicRuntimeConfig.BASE_URL + url} />
       <meta property="og:site_name" content="Time Pai Ruey" />
-      <meta property="og:image" content={websiteLogo} />
+      <meta property="og:image" content={publicRuntimeConfig.BASE_URL + websiteLogo} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="628" />
     </Head>
