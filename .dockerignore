@@ -3,7 +3,7 @@
 !.eslintignore
 !.prettierrc
 .*
-Dockerfile
+# Dockerfile
 
 # unuse folder
 coverage
