@@ -207,9 +207,9 @@ const MainLayout = ({ pathname, children, customStyle, seoData }: MainLayoutProp
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <NavberLink href="https://www.facebook.com/TimePaiRuey" target="_blank">
-              <Icon className="fab fa-facebook" />
-              <LinkText>FB PAGE</LinkText>
+            <NavberLink href="https://github.com/timenakrab" target="_blank">
+              <Icon className="fab fa-github" />
+              <LinkText>Github</LinkText>
             </NavberLink>
           </NavbarItem>
         </NavbarNav>
