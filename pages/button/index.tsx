@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import ButtonHoverBorder from '../../src/button/ButtonHoverBorder';
 import ButtonIconFA from '../../src/button/ButtonIconFA';
+import SwitchMobile from '../../src/button/SwitchMobile';
 import {
   ButtonHoverBorderLink,
   ButtonHoverBorderPreview,
@@ -16,11 +17,23 @@ import {
   ButtonIconFARequire,
   ButtonIconFASource,
 } from '../../src/codePreview/ButtonIconFAPreview';
+import {
+  SwitchMobileLink,
+  SwitchMobilePreview,
+  SwitchMobileRequire,
+  SwitchMobileSource,
+} from '../../src/codePreview/SwitchMobilePreview';
 import Divider from '../../src/Divider';
 import MainLayout from '../../src/MainLayout';
 import Text from '../../src/Text';
 import WarpCompPreview from '../../src/WarpCompPreview';
 
+const headerPageStyle: React.CSSProperties = {
+  textTransform: 'uppercase',
+  letterSpacing: 1,
+  margin: 0,
+  paddingTop: 16,
+};
 const SectionButton = styled.div`
   width: 100%;
   display: flex;
@@ -48,7 +61,7 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
         keywords: 'time-pai-ruey,design,buttons,button components',
       }}
     >
-      <Text type="h1" style={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+      <Text type="h1" style={headerPageStyle}>
         button components
       </Text>
       <Divider line="solid" />
@@ -117,6 +130,32 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
             >
               Hover Four Line
             </ButtonHoverBorder>
+          </WarpButton>
+        </SectionButton>
+      </WarpCompPreview>
+      <WarpCompPreview
+        title="toggle (design with mobile)"
+        exampleLink={SwitchMobileLink}
+        sourceCodeLink={SwitchMobileSource}
+        flexDirection="column"
+        codeLanguage="tsx"
+        codePreview={SwitchMobilePreview}
+        requireData={SwitchMobileRequire}
+      >
+        <SectionButton>
+          <WarpButton>
+            <SwitchMobile size={30} />
+          </WarpButton>
+          <WarpButton>
+            <SwitchMobile />
+          </WarpButton>
+          <WarpButton>
+            <SwitchMobile
+              uncheckedColor="grey"
+              checkedColor="white"
+              // eslint-disable-next-line no-alert
+              callbackFunc={(checked) => alert(checked)}
+            />
           </WarpButton>
         </SectionButton>
       </WarpCompPreview>

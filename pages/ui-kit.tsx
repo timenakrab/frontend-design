@@ -2,6 +2,7 @@ import { NextRouter } from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
 
+import Divider from '../src/Divider';
 import MainLayout from '../src/MainLayout';
 import Text from '../src/Text';
 import Alert from '../src/uiKit/Alert';
@@ -10,6 +11,12 @@ import ProgressBar from '../src/uiKit/ProgressBar';
 import QuickAction from '../src/uiKit/QuickAction';
 import Toggle from '../src/uiKit/Toggle';
 
+const headerPageStyle: React.CSSProperties = {
+  textTransform: 'uppercase',
+  letterSpacing: 1,
+  margin: 0,
+  paddingTop: 16,
+};
 const Background = styled.div`
   width: 100%;
   min-height: 100vh;
@@ -19,7 +26,7 @@ const Background = styled.div`
   }
 `;
 const WrapComp = styled.div`
-  margin: 0px 16px 24px 16px;
+  margin-bottom: 16px;
 `;
 const FlexRow = styled.div`
   display: flex;
@@ -35,6 +42,7 @@ const UIKitPage = ({ router }: UIKitProps) => {
   return (
     <MainLayout
       pathname={router.pathname}
+      customStyle={{ padding: '0px 16px', backgroundColor: '#f9f9f9' }}
       seoData={{
         title: 'UI Kit',
         desc: 'design ui kit for developer',
@@ -43,6 +51,10 @@ const UIKitPage = ({ router }: UIKitProps) => {
       }}
     >
       <Background>
+        <Text type="h1" style={headerPageStyle}>
+          ui kit
+        </Text>
+        <Divider line="solid" />
         <WrapComp>
           <Text type="h1" style={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
             Alerts

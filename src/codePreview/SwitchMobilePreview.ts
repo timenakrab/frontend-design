@@ -1,7 +1,7 @@
 import { BodyTableRequire } from '../TableRequirefield';
 
-export const SwitchMobileLink = '/toggle/mobile';
-export const SwitchMobileSource = '/src/toggle/SwitchMobile.tsx';
+export const SwitchMobileLink = '/button/toggle-mobile';
+export const SwitchMobileSource = '/src/button/SwitchMobile.tsx';
 export const SwitchMobilePreview = `
   <SwitchMobile
     size={60}

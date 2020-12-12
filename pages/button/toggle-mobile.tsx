@@ -2,9 +2,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import SwitchMobile from '../../src/button/SwitchMobile';
 import CodePreview from '../../src/CodePreview';
 import ContainerFlex from '../../src/ContainerFlex';
-import SwitchMobile from '../../src/toggle/SwitchMobile';
 
 const Root = styled.div`
   display: flex;

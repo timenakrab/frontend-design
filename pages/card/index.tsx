@@ -28,6 +28,12 @@ import MainLayout from '../../src/MainLayout';
 import Text from '../../src/Text';
 import WarpCompPreview from '../../src/WarpCompPreview';
 
+const headerPageStyle: React.CSSProperties = {
+  textTransform: 'uppercase',
+  letterSpacing: 1,
+  margin: 0,
+  paddingTop: 16,
+};
 const SectionCardProduct = styled.div`
   width: 320px;
   display: flex;
@@ -54,7 +60,7 @@ const CardPage = ({ router }: CardPageProps) => {
         keywords: 'time-pai-ruey,design,card,card components',
       }}
     >
-      <Text type="h1" style={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+      <Text type="h1" style={headerPageStyle}>
         card components
       </Text>
       <Divider line="solid" />

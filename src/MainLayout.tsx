@@ -50,7 +50,7 @@ const NavbarNav = styled.ul`
 const NavbarItem = styled.li`
   width: 100%;
   @media (max-width: 600px) {
-    &:nth-child(2) {
+    &:nth-child(1) {
       display: none;
     }
     &:last-child {
@@ -187,14 +187,6 @@ const MainLayout = ({ pathname, children, customStyle, seoData }: MainLayoutProp
               <NavberLink href="/button" active={pathname === '/button'}>
                 <Icon className="far fa-hand-point-up" />
                 <LinkText>button</LinkText>
-              </NavberLink>
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link href="/toggle">
-              <NavberLink href="/toggle" active={pathname === '/toggle'}>
-                <Icon className="fas fa-toggle-on" />
-                <LinkText>toggle</LinkText>
               </NavberLink>
             </Link>
           </NavbarItem>
