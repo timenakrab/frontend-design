@@ -13,25 +13,25 @@ const H2 = styled.h2`
   color: #000000;
   font-family: 'Kanit';
 `;
-const H3 = styled.h2`
+const H3 = styled.h3`
   font-size: 24px;
   line-height: 32px;
   color: #000000;
   font-family: 'Kanit';
 `;
-const H4 = styled.h2`
+const H4 = styled.h4`
   font-size: 20px;
   line-height: 26px;
   color: #000000;
   font-family: 'Kanit';
 `;
-const H5 = styled.h2`
+const H5 = styled.h5`
   font-size: 18px;
   line-height: 24px;
   color: #000000;
   font-family: 'Kanit';
 `;
-const H6 = styled.h2`
+const H6 = styled.h6`
   font-size: 16px;
   line-height: 22px;
   color: #000000;
@@ -50,57 +50,35 @@ const Span = styled.span`
   font-family: 'Kanit';
 `;
 
-interface TextProps {
-  children: string;
-  h1?: boolean;
-  h2?: boolean;
-  h3?: boolean;
-  h4?: boolean;
-  h5?: boolean;
-  h6?: boolean;
-  p?: boolean;
-  span?: boolean;
-  customStyles?: React.CSSProperties;
+interface TextProps
+  extends React.HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement | HTMLSpanElement> {
+  type?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
 }
 
-const Text = ({ h1, h2, h3, h4, h5, h6, p, span, children, customStyles }: TextProps) => {
-  if (h1) {
-    return <H1 style={{ ...customStyles }}>{children}</H1>;
+const Text = (props: TextProps) => {
+  const { type, children } = props;
+  switch (type) {
+    case 'h1':
+      return <H1 {...props}>{children}</H1>;
+    case 'h2':
+      return <H2 {...props}>{children}</H2>;
+    case 'h3':
+      return <H3 {...props}>{children}</H3>;
+    case 'h4':
+      return <H4 {...props}>{children}</H4>;
+    case 'h5':
+      return <H5 {...props}>{children}</H5>;
+    case 'h6':
+      return <H6 {...props}>{children}</H6>;
+    case 'span':
+      return <Span {...props}>{children}</Span>;
+    default:
+      return <P {...props}>{children}</P>;
   }
-  if (h2) {
-    return <H2 style={{ ...customStyles }}>{children}</H2>;
-  }
-  if (h3) {
-    return <H3 style={{ ...customStyles }}>{children}</H3>;
-  }
-  if (h4) {
-    return <H4 style={{ ...customStyles }}>{children}</H4>;
-  }
-  if (h5) {
-    return <H5 style={{ ...customStyles }}>{children}</H5>;
-  }
-  if (h6) {
-    return <H6 style={{ ...customStyles }}>{children}</H6>;
-  }
-  if (p) {
-    return <P style={{ ...customStyles }}>{children}</P>;
-  }
-  if (span) {
-    return <Span style={{ ...customStyles }}>{children}</Span>;
-  }
-  return <P style={{ ...customStyles }}>{children}</P>;
 };
 
 Text.defaultProps = {
-  h1: false,
-  h2: false,
-  h3: false,
-  h4: false,
-  h5: false,
-  h6: false,
-  p: false,
-  span: false,
-  customStyles: {},
+  type: 'p',
 };
 
 export default Text;

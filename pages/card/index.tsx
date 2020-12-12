@@ -54,7 +54,7 @@ const CardPage = ({ router }: CardPageProps) => {
         keywords: 'time-pai-ruey,design,card,card components',
       }}
     >
-      <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+      <Text type="h1" style={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         card components
       </Text>
       <Divider line="solid" />

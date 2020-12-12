@@ -105,7 +105,7 @@ const WarpCompPreview = ({
   const SectionCode = flexDirection === 'row' ? SectionCodeRow : SectionCodeColumn;
   return (
     <div>
-      <Text h2 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+      <Text type="h2" style={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         {title}
       </Text>
       <WarpComp flexDirection={flexDirection}>

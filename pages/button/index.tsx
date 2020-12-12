@@ -48,7 +48,7 @@ const ButtonPage = ({ router }: ButtonPageProps) => {
         keywords: 'time-pai-ruey,design,buttons,button components',
       }}
     >
-      <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+      <Text type="h1" style={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         button components
       </Text>
       <Divider line="solid" />

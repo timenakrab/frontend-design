@@ -44,7 +44,7 @@ const UIKitPage = ({ router }: UIKitProps) => {
     >
       <Background>
         <WrapComp>
-          <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
+          <Text type="h1" style={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
             Alerts
           </Text>
           <Alert
@@ -65,7 +65,7 @@ const UIKitPage = ({ router }: UIKitProps) => {
           />
         </WrapComp>
         <WrapComp>
-          <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
+          <Text type="h1" style={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
             Buttons
           </Text>
           <FlexRow>
@@ -83,7 +83,7 @@ const UIKitPage = ({ router }: UIKitProps) => {
             </Button>
             <Button className="mr-1 mb-1">Default</Button>
           </FlexRow>
-          <Text p customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+          <Text type="p" style={{ textTransform: 'uppercase', letterSpacing: 1 }}>
             Buttons (disabled)
           </Text>
           <div>
@@ -105,7 +105,7 @@ const UIKitPage = ({ router }: UIKitProps) => {
           </div>
         </WrapComp>
         <WrapComp>
-          <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
+          <Text type="h1" style={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
             Quick Actions
           </Text>
           <FlexRow>
@@ -115,7 +115,7 @@ const UIKitPage = ({ router }: UIKitProps) => {
             <QuickAction faClassName="fas fa-info" className="mr-1 mb-1" buttonType="info" />
             <QuickAction faClassName="fas fa-copy" className="mr-1 mb-1" />
           </FlexRow>
-          <Text p customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+          <Text type="p" style={{ textTransform: 'uppercase', letterSpacing: 1 }}>
             Quick Actions (disabled)
           </Text>
           <FlexRow>
@@ -147,7 +147,7 @@ const UIKitPage = ({ router }: UIKitProps) => {
           </FlexRow>
         </WrapComp>
         <WrapComp>
-          <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
+          <Text type="h1" style={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
             Progress bar
           </Text>
           <ProgressBar value={10} />
@@ -155,7 +155,7 @@ const UIKitPage = ({ router }: UIKitProps) => {
           <ProgressBar value={50} progressType="warning" />
           <ProgressBar value={75} progressType="success" />
           <ProgressBar value={100} progressType="info" />
-          <Text p customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+          <Text type="p" style={{ textTransform: 'uppercase', letterSpacing: 1 }}>
             Progress bar (Display value)
           </Text>
           <ProgressBar value={10} isDisplay />
@@ -165,7 +165,7 @@ const UIKitPage = ({ router }: UIKitProps) => {
           <ProgressBar value={100} progressType="info" isDisplay />
         </WrapComp>
         <WrapComp>
-          <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
+          <Text type="h1" style={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
             Toggle
           </Text>
           <Toggle label="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />

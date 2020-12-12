@@ -40,7 +40,7 @@ const TogglePage = ({ router }: TogglePageProps) => {
         keywords: 'time-pai-ruey,design,toggles,toggle components',
       }}
     >
-      <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+      <Text type="h1" style={{ textTransform: 'uppercase', letterSpacing: 1 }}>
         toggle components
       </Text>
       <Divider line="solid" />
