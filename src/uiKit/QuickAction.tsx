@@ -27,6 +27,7 @@ const QA = styled.button<IBtnQA>`
   box-shadow: none;
   border: 1px solid ${(props) => props.bgColor.secondary};
   border-radius: 50%;
+  -webkit-tap-highlight-color: transparent;
   &:hover {
     background-color: ${(props) => props.bgColor.primary};
   }
@@ -55,6 +56,7 @@ const QAD = styled.button`
   box-shadow: none;
   border: 1px solid ${textStyles.superlight};
   border-radius: 50%;
+  -webkit-tap-highlight-color: transparent;
   &:hover {
     background-color: ${buttonStyles.default.primary};
   }

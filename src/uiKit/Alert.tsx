@@ -49,6 +49,7 @@ const Close = styled.button<ICloseBtn>`
   outline: 0px;
   box-shadow: none;
   border: 0px solid transparent;
+  -webkit-tap-highlight-color: transparent;
   & > i {
     font-size: 20px;
     color: ${textStyles.white};

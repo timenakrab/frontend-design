@@ -23,6 +23,7 @@ const ToggleSection = styled.div`
   position: relative;
   margin-bottom: 8px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 `;
 const CheckBox = styled.input`
   appearance: none;
@@ -82,7 +83,7 @@ const Toggle: React.FC<Itoggle> = (props: Itoggle) => {
     color = customColor;
   }
   return (
-    <ToggleSection>
+    <ToggleSection onClick={() => setToggle(!isToggle)}>
       <span>
         <CheckBox
           type="checkbox"
@@ -91,12 +92,7 @@ const Toggle: React.FC<Itoggle> = (props: Itoggle) => {
             callbackFunc(isToggle);
           }}
         />
-        <SwitchBlock
-          className={isToggle ? 'active' : ''}
-          activeColor={color}
-          itemSize={size}
-          onClick={() => setToggle(!isToggle)}
-        >
+        <SwitchBlock className={isToggle ? 'active' : ''} activeColor={color} itemSize={size}>
           <SwitchBody
             itemSize={size}
             checked={isToggle}

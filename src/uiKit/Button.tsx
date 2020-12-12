@@ -27,6 +27,7 @@ const Design = styled.button<IBtn>`
   line-height: 24px;
   font-family: 'Kanit', sans-serif;
   color: ${textStyles.white};
+  -webkit-tap-highlight-color: transparent;
   &:hover {
     background-color: ${(props) => props.bgColor.primary};
   }
@@ -50,6 +51,7 @@ const Default = styled.button`
   line-height: 24px;
   font-family: 'Kanit', sans-serif;
   color: ${textStyles.dark};
+  -webkit-tap-highlight-color: transparent;
   &:hover {
     background-color: ${buttonStyles.default.primary};
   }
