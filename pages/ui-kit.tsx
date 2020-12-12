@@ -8,6 +8,7 @@ import Alert from '../src/uiKit/Alert';
 import Button from '../src/uiKit/Button';
 import ProgressBar from '../src/uiKit/ProgressBar';
 import QuickAction from '../src/uiKit/QuickAction';
+import Toggle from '../src/uiKit/Toggle';
 
 const Background = styled.div`
   width: 100%;
@@ -162,6 +163,35 @@ const UIKitPage = ({ router }: UIKitProps) => {
           <ProgressBar value={50} progressType="warning" isDisplay />
           <ProgressBar value={75} progressType="success" isDisplay />
           <ProgressBar value={100} progressType="info" isDisplay />
+        </WrapComp>
+        <WrapComp>
+          <Text h1 customStyles={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
+            Toggle
+          </Text>
+          <Toggle label="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
+          <Toggle
+            colorType="error"
+            label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            checked
+          />
+          <Toggle
+            colorType="warning"
+            label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          />
+          <Toggle
+            colorType="success"
+            label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            checked
+          />
+          <Toggle
+            colorType="info"
+            label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          />
+          <Toggle
+            customColor="#d38cff"
+            label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            checked
+          />
         </WrapComp>
       </Background>
     </MainLayout>

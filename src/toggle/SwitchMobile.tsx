@@ -9,7 +9,7 @@ type SwitchBodyProps = {
 };
 
 const Label = styled.label`
-  position: ralative;
+  position: relative;
   padding: 8px 0px;
   cursor: pointer;
 `;
