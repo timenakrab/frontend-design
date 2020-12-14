@@ -1,5 +1,7 @@
+import * as Sentry from '@sentry/react';
+import { Integrations } from '@sentry/tracing';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 import { seoDesc, seoKeywords, seoPage, seoTitle } from './constant/configWebsite';
@@ -154,6 +156,15 @@ type MainLayoutProps = {
 
 const MainLayout = ({ pathname, children, customStyle, seoData }: MainLayoutProps) => {
   const { title, desc, url, keywords } = seoData;
+  useEffect(() => {
+    Sentry.init({
+      dsn: 'https://5caa6d77b1514fc1be9f8ff55df2b4d6@o490965.ingest.sentry.io/5555716',
+      autoSessionTracking: true,
+      integrations: [new Integrations.BrowserTracing()],
+      tracesSampleRate: 1.0,
+    });
+    return () => {};
+  }, [pathname]);
   return (
     <>
       <Navbar>
