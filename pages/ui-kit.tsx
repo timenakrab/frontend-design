@@ -6,6 +6,7 @@ import Divider from '../src/Divider';
 import MainLayout from '../src/MainLayout';
 import Text from '../src/Text';
 import Alert from '../src/uiKit/Alert';
+import Badge from '../src/uiKit/Badge';
 import Button from '../src/uiKit/Button';
 import ProgressBar from '../src/uiKit/ProgressBar';
 import QuickAction from '../src/uiKit/QuickAction';
@@ -204,6 +205,40 @@ const UIKitPage = ({ router }: UIKitProps) => {
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             checked
           />
+        </WrapComp>
+        <WrapComp>
+          <Text type="h1" style={{ textTransform: 'uppercase', letterSpacing: 1, marginTop: 0 }}>
+            Badges
+          </Text>
+          <Badge badgeType="error" className="mr-1">
+            Error
+          </Badge>
+          <Badge badgeType="warning" className="mr-1">
+            Warning
+          </Badge>
+          <Badge badgeType="success" className="mr-1">
+            Success
+          </Badge>
+          <Badge badgeType="info" className="mr-1">
+            Info
+          </Badge>
+          <Badge className="mr-1">Default</Badge>
+          <Text type="p" style={{ textTransform: 'uppercase', letterSpacing: 1 }}>
+            Badges (Outline)
+          </Text>
+          <Badge outline badgeType="error" className="mr-1">
+            Error outline
+          </Badge>
+          <Badge outline badgeType="warning" className="mr-1">
+            Warning outline
+          </Badge>
+          <Badge outline badgeType="success" className="mr-1">
+            Success outline
+          </Badge>
+          <Badge outline badgeType="info" className="mr-1">
+            Info outline
+          </Badge>
+          <Badge className="mr-1">Default outline</Badge>
         </WrapComp>
       </Background>
     </MainLayout>
