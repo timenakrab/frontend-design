@@ -2,6 +2,8 @@
 !.eslintrc.js
 !.eslintignore
 !.prettierrc
+.*
+Dockerfile
 
 # unuse folder
 coverage

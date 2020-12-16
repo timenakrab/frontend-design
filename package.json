@@ -8,7 +8,7 @@
     "start": "NODE_ENV=production node server.js",
     "export": "next export",
     "deploy": "npm run build && npm run export",
-    "production": "npm run build && npm run start"
+    "production": "npm run start"
   },
   "dependencies": {
     "@sentry/react": "^5.29.0",

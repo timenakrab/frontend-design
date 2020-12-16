@@ -34,7 +34,7 @@ docker build -t frontend-design .
 ## create container
 
 ```bash
-docker run -p 8888:5050 --name frontendDesign frontend-design
+docker run --env PORT=8888 --env=BASE_URL=http://127.0.0.1 -p 5050:8888 --name frontendDesign frontend-design
 ```
 
 ## stop & delete container
